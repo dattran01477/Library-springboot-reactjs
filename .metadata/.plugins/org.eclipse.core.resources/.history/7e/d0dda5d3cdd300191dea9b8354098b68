@@ -1,0 +1,18 @@
+package com.library.dao.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+@Document("english")
+public class English {
+
+	@Id
+	private String id;
+	@Field("data")
+	private String data;
+	@Field("type")
+	private String type;
+	@Field("startdate")
+	private String startDate;
+}

@@ -1,0 +1,5 @@
+package com.library.bussiness.service;
+
+public Interface GenericService {
+
+}

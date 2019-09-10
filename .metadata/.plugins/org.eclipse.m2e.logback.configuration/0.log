@@ -1,0 +1,633 @@
+2019-09-10 19:45:27,218 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-09-10 19:57:36,032 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-09-10 19:59:40,671 [Worker-4: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: Library-parent:Library-parent:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\Library-parent\pom.xml.
+2019-09-10 19:59:41,451 [Worker-4: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-09-10 19:59:41,466 [Worker-4: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: Library-parent:Library-parent:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\Library-parent\pom.xml.
+2019-09-10 19:59:41,611 [Worker-4: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2019-09-10 20:01:12,582 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:dao:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\pom.xml.
+2019-09-10 20:01:19,582 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /dao/src/main/java
+2019-09-10 20:01:19,583 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /dao/src/main/resources
+2019-09-10 20:01:19,600 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /dao/src/main/resources
+2019-09-10 20:01:19,619 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /dao/src/test/java
+2019-09-10 20:01:25,812 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 20 sec
+2019-09-10 20:01:25,814 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-09-10 20:01:26,705 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:dao:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\pom.xml.
+2019-09-10 20:01:27,920 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /dao/src/main/java
+2019-09-10 20:01:27,920 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /dao/src/main/resources
+2019-09-10 20:01:27,924 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /dao/src/main/resources
+2019-09-10 20:01:27,931 [Worker-9: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /dao/src/test/java
+2019-09-10 20:01:28,509 [Worker-9: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2019-09-10 20:01:29,725 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:01:29,746 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:01:29,764 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:01:29,778 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:01:29,797 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:01:42,030 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:01:42,929 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /bussiness/src/main/java
+2019-09-10 20:01:42,945 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /bussiness/src/main/resources
+2019-09-10 20:01:42,976 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /bussiness/src/main/resources
+2019-09-10 20:01:43,015 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /bussiness/src/test/java
+2019-09-10 20:01:43,496 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 2 sec
+2019-09-10 20:01:43,531 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-09-10 20:01:44,332 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:01:45,135 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /bussiness/src/main/java
+2019-09-10 20:01:45,135 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /bussiness/src/main/resources
+2019-09-10 20:01:45,199 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /bussiness/src/main/resources
+2019-09-10 20:01:45,235 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /bussiness/src/test/java
+2019-09-10 20:01:45,529 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2019-09-10 20:01:47,045 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:01:47,071 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:01:47,095 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:01:47,109 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:01:47,109 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:02:40,657 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:02:42,607 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web/src/main/java
+2019-09-10 20:02:42,607 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web/src/main/resources
+2019-09-10 20:02:42,644 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web/src/main/resources
+2019-09-10 20:02:42,696 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web/src/test/java
+2019-09-10 20:02:46,219 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 6 sec
+2019-09-10 20:02:46,222 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-09-10 20:02:48,009 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:02:49,803 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web/src/main/java
+2019-09-10 20:02:49,803 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web/src/main/resources
+2019-09-10 20:02:49,815 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /web/src/main/resources
+2019-09-10 20:02:49,832 [Worker-10: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web/src/test/java
+2019-09-10 20:02:50,360 [Worker-10: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 4 sec
+2019-09-10 20:02:51,905 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:02:51,905 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:02:51,909 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:02:51,927 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:02:51,937 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:04:01,427 [Worker-2: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: Library-parent:Library-parent:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\Library-parent\pom.xml.
+2019-09-10 20:04:53,972 [Worker-8: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: Library-parent:Library-parent:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\Library-parent\pom.xml.
+2019-09-10 20:04:56,308 [Worker-7: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: Library-parent:Library-parent:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\Library-parent\pom.xml.
+2019-09-10 20:05:19,404 [Worker-6: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:05:20,023 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:20,029 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:20,035 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:20,036 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:20,042 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:05:27,691 [Worker-13: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:05:28,232 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:28,240 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:05:28,250 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:28,253 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:28,259 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:05:34,997 [Worker-15: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:dao:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\pom.xml.
+2019-09-10 20:05:35,606 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:35,606 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:35,621 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:35,632 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:35,641 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:05:36,775 [Worker-7: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:dao:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\pom.xml.
+2019-09-10 20:05:37,272 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:37,280 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:37,286 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:37,289 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:37,296 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:05:44,653 [Worker-6: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:05:45,326 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:45,326 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:45,340 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:45,355 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:45,366 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:05:47,048 [Worker-9: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:05:47,409 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:47,434 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:47,446 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:47,449 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:47,461 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:05:50,925 [Worker-13: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:05:51,383 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:51,384 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:51,391 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:51,399 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:51,404 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:05:56,097 [Worker-2: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:dao:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\pom.xml.
+2019-09-10 20:05:56,490 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:56,496 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:05:56,502 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:05:56,504 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:05:56,509 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:06:27,780 [Worker-14: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:06:28,273 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:06:28,273 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:06:28,281 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:06:28,291 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:06:28,296 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:07:17,358 [Worker-5: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/bussiness/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:851) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$2.call(ProjectRegistryManager.java:1069) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$2.call(ProjectRegistryManager.java:1) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:5065) ~[na:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211) ~[na:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:5060) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1067) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261) ~[org.eclipse.m2e.core.ui_1.12.0.20190529-1916.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:740) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1074) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.400.v20190506-1457.jar:na]
+2019-09-10 20:07:17,769 [Worker-13: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:08:00,784 [Worker-5: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:00,987 [Worker-13: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:08:01,260 [Worker-13: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:01,504 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:01,511 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:01,517 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:01,518 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:01,527 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:08:03,633 [Worker-9: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:04,491 [Worker-5: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:08:04,788 [Worker-5: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:05,709 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:05,721 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:08:05,744 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:05,747 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:05,753 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:08:21,997 [Worker-0: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:dao:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\pom.xml.
+2019-09-10 20:08:23,274 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:23,277 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:23,283 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:23,291 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:23,297 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:08:29,997 [Worker-7: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:30,456 [Worker-15: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:bussiness:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\pom.xml.
+2019-09-10 20:08:30,691 [Worker-15: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:31,358 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:31,366 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:31,372 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:31,374 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:31,379 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:08:49,018 [Worker-10: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:49,036 [Worker-10: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:08:49,504 [Worker-11: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:08:49,988 [Worker-11: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:49,993 [Worker-11: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:08:50,666 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:50,669 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:50,675 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:50,678 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:50,685 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:08:52,516 [Worker-6: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:08:52,521 [Worker-6: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:08:52,524 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:52,532 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:08:52,552 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:08:52,560 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:08:52,560 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:09:31,577 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:09:31,579 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:09:31,581 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:09:31,583 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:09:31,591 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:09:37,306 [Worker-12: Check for devtools] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:09:49,662 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:09:49,671 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:09:49,684 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:09:49,685 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:09:49,690 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:10:11,550 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:10:11,556 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:10:11,564 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:10:11,571 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:10:11,571 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:11:44,282 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:11:44,283 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:11:44,285 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:11:44,285 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:11:44,292 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:12:37,320 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:12:37,329 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:12:37,337 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:12:37,344 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:12:37,344 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:13:38,615 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:13:38,616 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:13:38,622 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:13:38,631 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:13:38,642 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:13:42,268 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:13:42,277 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:13:42,287 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:13:42,294 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:13:42,294 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:15:11,071 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:15:11,072 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:15:11,074 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:15:11,076 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:15:11,077 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:16:30,730 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:16:30,730 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:16:30,734 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:16:30,742 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:16:30,742 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:17:57,289 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:17:57,290 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:17:57,298 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:17:57,308 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:17:57,313 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:18:20,822 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:18:20,838 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:18:20,853 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:18:20,868 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:18:20,868 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:18:34,275 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:18:34,276 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:18:34,278 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:18:34,280 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:18:34,285 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:20:13,207 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:20:13,217 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:20:13,229 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:20:13,238 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:20:13,238 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:20:59,239 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:20:59,240 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:20:59,248 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:20:59,256 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:20:59,262 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:21:01,326 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:01,337 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:21:01,350 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:21:01,366 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:01,366 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:21:16,070 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:16,071 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:21:16,074 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:21:16,076 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:16,076 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:21:31,503 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:31,504 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:21:31,506 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:21:31,513 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:31,513 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:21:43,876 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:43,877 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:21:43,885 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:21:43,897 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:21:43,904 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:22:22,190 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:22:22,196 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:22:22,203 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:22:22,210 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:22:22,210 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:22:26,018 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:22:26,018 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:22:26,021 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:22:26,023 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:22:26,029 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:23:28,049 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:23:28,057 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:23:28,064 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:23:28,072 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:23:28,072 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:23:39,579 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:23:39,580 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:23:39,585 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:23:39,592 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:23:39,597 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:24:36,420 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:24:36,427 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:24:36,434 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:24:36,441 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:24:36,441 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:24:43,415 [Worker-9: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:24:43,736 [Worker-9: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:25:36,686 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:25:36,687 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:25:36,688 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:25:36,690 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:25:36,690 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:25:42,804 [Worker-9: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:25:43,103 [Worker-9: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:25:55,741 [Worker-8: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:25:56,091 [Worker-8: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:26:55,857 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:26:55,862 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:26:55,869 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:26:55,875 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:26:55,876 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:27:00,651 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:27:00,651 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:27:00,651 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:27:00,653 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:27:00,653 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:27:15,778 [Worker-14: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:27:15,781 [Worker-14: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:27:16,241 [Worker-14: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:27:16,250 [Worker-14: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:28:23,979 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:28:23,986 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:28:23,995 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:28:24,009 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:28:24,009 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:28:29,685 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:28:29,686 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:28:29,693 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:28:29,701 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:28:29,708 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:28:33,209 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:28:33,215 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:28:33,222 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:28:33,228 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:28:33,229 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:28:37,416 [Worker-7: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:28:37,419 [Worker-7: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:28:37,786 [Worker-7: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:28:37,789 [Worker-7: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:35:07,324 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:35:07,328 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:35:07,530 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:35:07,533 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:35:07,740 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:35:07,743 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:35:27,720 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:35:27,721 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:35:27,731 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:35:27,741 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:35:27,754 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:35:58,560 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:35:58,568 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:35:58,926 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:35:58,934 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:37:34,918 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:37:34,923 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:37:34,930 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:37:34,937 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:37:34,937 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:37:41,374 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:37:41,375 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:37:41,376 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:37:41,377 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:37:41,378 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:37:51,781 [Worker-19: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:37:51,784 [Worker-19: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:37:52,130 [Worker-19: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:37:52,137 [Worker-19: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:38:53,543 [Worker-19: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:38:54,025 [Worker-19: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:38:54,043 [Worker-19: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:38:54,320 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:38:54,320 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:38:54,326 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:38:54,328 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:38:54,336 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:38:56,873 [Worker-20: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:38:56,880 [Worker-20: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:38:56,885 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:38:56,943 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:38:56,957 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:38:56,969 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:38:56,969 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:39:06,447 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:39:06,450 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:39:06,784 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:39:06,787 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:39:33,842 [Worker-8: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:39:34,131 [Worker-8: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:39:34,138 [Worker-8: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:39:34,352 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:39:34,360 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:39:34,360 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:39:34,370 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:39:34,371 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:39:35,908 [Worker-19: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:39:35,916 [Worker-19: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:39:35,925 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:39:35,926 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:39:35,959 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:39:35,961 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:39:35,972 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:39:43,482 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:39:43,490 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:39:43,760 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:39:43,768 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:40:15,372 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:40:15,384 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:40:15,706 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:40:15,716 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:40:31,340 [Worker-17: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:40:31,348 [Worker-17: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:40:31,617 [Worker-17: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:40:31,625 [Worker-17: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:40:48,244 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:40:48,255 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:40:48,539 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:40:48,547 [Worker-8: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:41:27,648 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:41:27,654 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:41:27,662 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:41:27,668 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:41:27,668 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:41:32,153 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:41:32,156 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:41:32,425 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:41:32,428 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:42:45,783 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:42:45,784 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:42:45,785 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:42:45,787 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:42:45,794 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:42:54,103 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:42:54,372 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:43:23,928 [Worker-24: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:43:24,184 [Worker-24: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:44:45,706 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:44:45,715 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:44:45,723 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:44:45,730 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:44:45,730 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:44:51,771 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:44:51,771 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:44:51,784 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:44:51,808 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:44:51,816 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:44:51,943 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:44:52,227 [Worker-20: Launching BussinessApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:45:28,323 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:28,324 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:45:28,326 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:45:28,333 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:28,338 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\dao\src\test\resources
+2019-09-10 20:45:40,289 [Worker-19: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:45:40,899 [Worker-19: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:45:40,923 [Worker-19: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:45:41,175 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:41,182 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:45:41,182 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:45:41,189 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:41,189 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:45:43,118 [Worker-22: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:45:43,124 [Worker-22: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:45:43,671 [Worker-17: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.library:web:1.0.0 @ C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\pom.xml.
+2019-09-10 20:45:44,276 [Worker-17: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:45:44,321 [Worker-17: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:45:45,352 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:45,362 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:45:45,372 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:45:45,383 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:45,383 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:45:53,223 [Worker-19: Check for devtools] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier  to /dao/target/classes
+2019-09-10 20:45:53,228 [Worker-19: Check for devtools] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier  to /bussiness/target/classes
+2019-09-10 20:45:58,494 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:58,494 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:45:58,495 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:45:58,497 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:45:58,497 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:45:58,649 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:45:58,657 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:45:59,101 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:45:59,109 [Worker-2: Launching WebApplicationTests] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:46:26,657 [Worker-18: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:46:26,666 [Worker-18: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:46:26,852 [Worker-18: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:46:26,860 [Worker-18: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:46:27,078 [Worker-18: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:46:27,088 [Worker-18: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:46:59,656 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:46:59,678 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:46:59,688 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:46:59,697 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:46:59,697 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:47:30,801 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:47:30,802 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:47:30,811 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:47:30,820 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:47:30,828 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:47:36,976 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:47:36,982 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:47:36,991 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:47:36,997 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:47:36,997 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:48:50,102 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:48:50,103 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:48:50,106 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:48:50,108 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:48:50,108 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:48:58,112 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:48:58,113 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:48:58,115 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:48:58,125 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:48:58,126 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:49:13,925 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:13,925 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:49:13,931 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:49:13,937 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:13,945 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:49:16,220 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:16,230 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:49:16,239 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:49:16,247 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:16,248 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:49:34,896 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:34,897 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:49:34,899 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:49:34,903 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:34,911 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:49:57,828 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:57,835 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:49:57,841 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:49:57,850 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:49:57,850 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:50:08,822 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:08,823 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:50:08,833 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:50:08,841 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:08,847 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:50:27,988 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:27,995 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:50:28,005 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:50:28,013 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:28,013 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:50:38,371 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:38,371 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:50:38,372 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:50:38,374 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:38,374 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:50:43,092 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:43,093 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:50:43,094 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:50:43,104 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:50:43,104 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:51:38,564 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:51:38,564 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:51:38,571 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:51:38,578 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:51:38,583 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:51:50,920 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:51:50,928 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:51:50,935 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:51:50,942 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:51:50,942 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:52:00,815 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:00,816 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:52:00,818 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:52:00,820 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:00,830 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:52:03,150 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:03,156 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:52:03,163 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:52:03,173 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:03,173 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\bussiness\src\test\resources
+2019-09-10 20:52:25,320 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:25,322 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:52:25,341 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:52:25,357 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:25,368 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:52:33,667 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:33,676 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:52:33,685 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:52:33,693 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:33,693 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:52:44,836 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:44,838 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:52:44,840 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:52:44,842 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:52:44,842 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:53:15,536 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:53:15,540 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:53:15,547 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:53:15,575 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:53:15,575 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:53:18,918 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:53:18,919 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:53:18,930 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:53:18,937 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:53:18,942 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:54:16,825 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:54:16,831 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:54:16,841 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:54:16,854 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:54:16,854 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:54:19,440 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:54:19,441 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:54:19,442 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:54:19,444 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:54:19,451 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:55:03,395 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:55:03,400 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:55:03,406 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:55:03,414 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:55:03,414 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:55:07,568 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:55:07,568 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:55:07,578 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:55:07,587 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:55:07,595 [Worker-25: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
+2019-09-10 20:55:18,094 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:55:18,103 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:55:18,372 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:55:18,382 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:55:18,580 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/dao: com.library:dao:1.0.0 with classifier null to /dao/target/classes
+2019-09-10 20:55:18,590 [Worker-8: Launching web - WebApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/bussiness: com.library:bussiness:1.0.0 with classifier null to /bussiness/target/classes
+2019-09-10 20:55:44,844 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:55:44,863 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-09-10 20:55:44,874 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 20:55:44,884 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 20:55:44,884 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\web\src\test\resources
