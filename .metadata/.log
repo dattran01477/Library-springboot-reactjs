@@ -3432,3 +3432,239 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Duplicated 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-11 21:42:59.105
 !MESSAGE executing callback sts4.classpath.YzYoIvaw SUCCESS [done]
+!SESSION 2019-09-12 07:43:18.928 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-09-12 07:47:31.095
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-09-12 07:47:35.637
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-09-12 07:47:35.637
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57d0c779,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3070f59f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:03.223
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:03.235
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@78fb8a66[org.springframework.tooling.boot.ls:1.10.0.201908130624(id=1001)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:03.263
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:03.730
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-09-12 07:48:06.312
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dattr'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.core 4 0 2019-09-12 07:48:08.581
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[<empty> -> '.git', absolute path: 'C:/Users/Dattr/OneDrive/Documents/workspace-eclipse/library/Library-parent/dao/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: 
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:724)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:687)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:651)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:634)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:220)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:335)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296)
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:712)
+	at org.eclipse.egit.ui.internal.resources.ResourceStateFactory.getIndexDiffDataOrNull(ResourceStateFactory.java:103)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:224)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:333)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-09-12 07:48:08.740
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.nio.file.NoSuchFileException: C:\Users\Dattr\OneDrive\Documents\workspace-eclipse\library\.metadata\.plugins\org.eclipse.core.resources\.projects\dao\org.eclipse.egit.core\GitProjectData.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:235)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:373)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:424)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:158)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:620)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:220)
+	at org.eclipse.egit.core.GitProvider.getData(GitProvider.java:108)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:340)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296)
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:712)
+	at org.eclipse.egit.ui.internal.resources.ResourceStateFactory.getIndexDiffDataOrNull(ResourceStateFactory.java:103)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:224)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:333)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2019-09-12 07:48:09.019
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[dao -> '.git', absolute path: 'C:/Users/Dattr/OneDrive/Documents/workspace-eclipse/library/Library-parent/dao/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: dao
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:724)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:687)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:651)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:634)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:220)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:335)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296)
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:712)
+	at org.eclipse.egit.ui.internal.resources.ResourceStateFactory.getIndexDiffDataOrNull(ResourceStateFactory.java:103)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:224)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:333)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.416
+!MESSAGE Boot LS startup time from start to initialized: 51124ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.528
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.gNmTTIMvisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.538
+!MESSAGE subscribing to classpath changes: sts4.classpath.gNmTTIMv isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.550
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.561
+!MESSAGE subsribers = {sts4.classpath.gNmTTIMv=Send Classpath Notifications(806)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.569
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.625
+!MESSAGE project web ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.639
+!MESSAGE project Library-parent ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.648
+!MESSAGE Preparing classpath changed notification web
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.657
+!MESSAGE project bussiness ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.668
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.676
+!MESSAGE project dao ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.693
+!MESSAGE classpath=78 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.703
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.721
+!MESSAGE buffering callback sts4.classpath.gNmTTIMv web false 78
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.730
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.gNmTTIMv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.754
+!MESSAGE Preparing classpath changed notification Library-parent
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.778
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.788
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.795
+!MESSAGE buffering callback sts4.classpath.gNmTTIMv Library-parent false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.804
+!MESSAGE Preparing classpath changed notification bussiness
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.812
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.824
+!MESSAGE classpath=53 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.835
+!MESSAGE buffering callback sts4.classpath.gNmTTIMv bussiness false 53
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.843
+!MESSAGE Preparing classpath changed notification dao
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.852
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.862
+!MESSAGE classpath=50 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.872
+!MESSAGE buffering callback sts4.classpath.gNmTTIMv dao false 50
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:54.880
+!MESSAGE executing callback sts4.classpath.gNmTTIMv 4 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:48:55.002
+!MESSAGE executing callback sts4.classpath.gNmTTIMv SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2019-09-12 07:50:49.603
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:54:31.910
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gNmTTIMv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:54:31.927
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.gNmTTIMv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:54:31.950
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-09-12 07:54:31.961
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gNmTTIMv => OK

@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\Dattr\\OneDrive\\Documents\\workspace-eclipse\\library\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\Dattr\\OneDrive\\Documents\\workspace-eclipse\\library\\Library-parent\\dao\\.git;C\:\\Users\\Dattr\\OneDrive\\Documents\\workspace-eclipse\\library\\Library-parent\\.git;C\:\\Users\\Dattr\\OneDrive\\Documents\\workspace-eclipse\\library\\.git;
+GitRepositoriesView.GitDirectories.relative=Library-parent\\dao\\.git;Library-parent\\.git;.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
