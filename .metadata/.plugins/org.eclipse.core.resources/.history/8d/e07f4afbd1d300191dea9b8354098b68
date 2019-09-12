@@ -1,7 +1,0 @@
-package com.library.bussiness.service.impl;
-
-import com.library.bussiness.service.EnglishService;
-
-public class EnglishServiceImpl implements EnglishService{
-
-}
