@@ -12,7 +12,7 @@ import com.library.dao.repository.EnglishRepository;
 
 @Service
 @Transactional
-public class EnglishServiceImpl implements EnglishService {
+public class EnglishServiceImpl extends AbstractService implements EnglishService {
 
 	@Autowired
 	EnglishRepository englishRepository;

@@ -2,6 +2,8 @@ package com.library.bussiness.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 public interface GenericService<T, ID> {
 	public List<T> findAll();
 
