@@ -20,6 +20,7 @@ import com.library.dao.model.criteria.CategoryCriteria;
 @RequestMapping("/categories")
 public class CategoryController extends AbstractController {
 
+	
 	@Autowired
 	CategoryServiceImpl categoryServiceImpl;
 
