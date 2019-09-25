@@ -1,1 +1,1 @@
-heroku run ls target
+heroku deploy:jar target/web-1.0.0
