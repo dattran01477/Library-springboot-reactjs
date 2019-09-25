@@ -13,6 +13,7 @@
 		<version>2.1.8.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	
 	<modules>
 		<module>dao</module>
 		<module>web</module>
