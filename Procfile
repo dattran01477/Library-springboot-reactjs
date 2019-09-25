@@ -1,1 +1,2 @@
-web:java -Dserver.port=$PORT -jar web\target\web-1.0.0.war
+web:java $JAVA_OPTS -jar web-1.0.0.war  $JAR_OPTS
+
