@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document("english")
-public class English implements Serializable {
+public class English extends AbstractModel implements Serializable {
 
 	/**
 	 * 

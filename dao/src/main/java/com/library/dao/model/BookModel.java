@@ -13,7 +13,7 @@ import com.library.dao.model.child.BookDetailModel;
 import com.library.dao.model.child.ReviewModel;
 
 @Document("book")
-public class BookModel implements Serializable {
+public class BookModel extends AbstractModel implements Serializable {
 
 	/**
 	 * 

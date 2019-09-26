@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-public interface GenericService<T, ID> {
+import com.library.dao.model.CategoryModel;
+
+public interface GenericService<T, ID, C> {
 	public List<T> findAll();
 
 	public void create(T object);
@@ -14,4 +16,6 @@ public interface GenericService<T, ID> {
 	public void delete(ID id);
 
 	public T findById(ID id);
+	
+	public Page<T> findBySearchCriteria(C criteria);
 }
