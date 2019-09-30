@@ -14,23 +14,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.library.bussiness.service.impl.BookServiceImpl;
-import com.library.dao.model.BookModel;
-import com.library.dao.model.criteria.BookSearchCriteria;
+import com.library.bussiness.service.impl.AuthorServiceImpl;
+import com.library.dao.model.AuthorModel;
+import com.library.dao.model.CategoryModel;
+import com.library.dao.model.criteria.AuthorCriteria;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/books")
-@Api(value="Book API", description="Book API")
-public class BookController extends AbstractController {
+@RequestMapping("/authors")
+@Api(value="Author API", description="Author API")
+public class AuthorController extends AbstractController {
 	@Autowired
-	BookServiceImpl bookServiceImpl;
+	AuthorServiceImpl authorServiceImpl;
 	
-	@ApiOperation(value = "View a list of books", response = List.class)
+	@ApiOperation(value = "View a list of authors", response = List.class)
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = "Successfully retrieved list"),
         @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -38,41 +40,41 @@ public class BookController extends AbstractController {
         @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
 	@GetMapping
-	public Page<BookModel> findCategoryByCriteria(BookSearchCriteria criteria) {
-		return bookServiceImpl.findBySearchCriteria(criteria);
+	public Page<AuthorModel> findCategoryByCriteria(AuthorCriteria criteria) {
+		return authorServiceImpl.findBySearchCriteria(criteria);
 	}
 	
-	@ApiOperation(value = "Get a book by id")
+	@ApiOperation(value = "Get a author by id")
 	@GetMapping("/{id}")
-	public ResponseEntity<BookModel> findById(@PathVariable("id") String id) {
+	public ResponseEntity<AuthorModel> findById(@PathVariable("id") String id) {
 		try {
-			BookModel book = bookServiceImpl.findById(id);
-			return new ResponseEntity<BookModel>(book, HttpStatus.OK);
+			AuthorModel author = authorServiceImpl.findById(id);
+			return new ResponseEntity<AuthorModel>(author, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
-		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<AuthorModel>(HttpStatus.NOT_FOUND);
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<BookModel> update(@PathVariable("id") String id,
-			@RequestBody BookModel bookFrom) {
+	public ResponseEntity<AuthorModel> update(@PathVariable("id") String id,
+			@RequestBody AuthorModel authorFrom) {
 		try {
-			BookModel book = bookServiceImpl.findById(id);
-			book.buildInfo(bookFrom);
-			bookServiceImpl.update(book);
-			return new ResponseEntity<BookModel>(book, HttpStatus.OK);
+			AuthorModel author = authorServiceImpl.findById(id);
+			author.setName(authorFrom.getName());
+			authorServiceImpl.update(author);
+			return new ResponseEntity<AuthorModel>(author, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
-		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<AuthorModel>(HttpStatus.NOT_FOUND);
 	}
 
 	@SuppressWarnings("rawtypes")
 	@DeleteMapping("/{id}")
 	public ResponseEntity delete(@PathVariable("id") String id) {
 		try {
-			bookServiceImpl.delete(id);
+			authorServiceImpl.delete(id);
 			return new ResponseEntity(HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);

@@ -57,7 +57,6 @@ public class BookServiceImpl extends AbstractService implements BookService {
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
-
 	}
 
 	@Override
