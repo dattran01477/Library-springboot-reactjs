@@ -3,11 +3,13 @@ package com.library.bussiness.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.EnglishService;
 import com.library.dao.model.English;
+import com.library.dao.model.criteria.EnglishCriteria;
 import com.library.dao.repository.EnglishRepository;
 
 @Service
@@ -47,6 +49,12 @@ public class EnglishServiceImpl extends AbstractService implements EnglishServic
 
 	@Override
 	public English findById(String id) {
+		return null;
+	}
+
+	@Override
+	public Page<English> findBySearchCriteria(EnglishCriteria criteria) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

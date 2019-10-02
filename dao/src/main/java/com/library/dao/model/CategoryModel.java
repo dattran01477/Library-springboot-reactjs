@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document("category")
-public class CategoryModel implements Serializable {
+public class CategoryModel extends AbstractModel implements Serializable {
 
 	/**
 	 * 

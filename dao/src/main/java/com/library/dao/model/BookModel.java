@@ -13,7 +13,7 @@ import com.library.dao.model.child.BookDetailModel;
 import com.library.dao.model.child.ReviewModel;
 
 @Document("book")
-public class BookModel implements Serializable {
+public class BookModel extends AbstractModel implements Serializable {
 
 	/**
 	 * 
@@ -231,5 +231,26 @@ public class BookModel implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	
+	public void buildInfo(BookModel bookFrom) {
+		this.name = bookFrom.getName();
+		this.author = bookFrom.getAuthor();
+		this.sumary = bookFrom.getSumary();
+		this.starTotal = bookFrom.getStarTotal();
+		this.price = bookFrom.getPrice();
+		this.saleOffPrice = bookFrom.getSaleOffPrice();
+		this.percentSale = bookFrom.getPercentSale();
+		this.clickViewTotal = bookFrom.getClickViewTotal();
+		this.bigImageLink = bookFrom.getBigImageLink();
+		this.smallImageLink = bookFrom.getSmallImageLink();
+		this.type = bookFrom.getType();
+		this.category = bookFrom.getCategory();
+		this.ageRangeFrom = bookFrom.getAgeRangeFrom();
+		this.ageRangeTo = bookFrom.ageRangeTo;
+		this.languae = bookFrom.getLanguae();
+		this.content = bookFrom.getContent();
+		this.reviews = bookFrom.getReviews();
+		this.bookDetail = bookFrom.getBookDetail();
 	}
 }

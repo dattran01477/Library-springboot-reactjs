@@ -5,8 +5,8 @@ import java.io.Serializable;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document
-public class AuthorModel implements Serializable {
+@Document("author")
+public class AuthorModel extends AbstractModel implements Serializable {
 	/**
 	 * 
 	 */
