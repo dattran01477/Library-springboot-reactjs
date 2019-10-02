@@ -1,1 +1,14 @@
 /.metadata/
+web/target/m2e-wtp/web-resources/META-INF/maven/com.library/web/pom.xml
+web/target/m2e-wtp/web-resources/META-INF/maven/com.library/web/pom.properties
+web/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+web/target/classes/com/library/web/config/security/SecurityProperties.class
+web/target/classes/com/library/web/config/security/SecurityProperties$Cors.class
+web/target/classes/com/library/web/config/security/SecurityContextUtils.class
+web/target/classes/com/library/web/config/security/SecurityConfigurer.class
+web/target/classes/com/library/web/config/security/OAuth2RestTemplateConfigurer.class
+web/target/classes/com/library/web/config/security/OAuth2RestTemplateConfigurer$ServiceAccountEnabled.class
+web/target/classes/com/library/web/config/security/OAuth2RestTemplateConfigurer$ServiceAccountEnabled$SecurityEnabled.class
+web/target/classes/com/library/web/config/security/OAuth2RestTemplateConfigurer$ServiceAccountEnabled$ClientCredentialConfigurationExists.class
+web/target/test-classes/com/library/web/WebApplicationTests.class
+web/target/classes/com/library/web/config/security/JwtAccessTokenCustomizer.class
