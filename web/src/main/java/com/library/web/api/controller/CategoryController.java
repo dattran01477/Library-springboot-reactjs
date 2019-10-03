@@ -20,7 +20,7 @@ import com.library.dao.model.criteria.CategoryCriteria;
 @RestController
 @RequestMapping("/categories")
 public class CategoryController extends AbstractController {
-	
+
 	@Autowired
 	CategoryServiceImpl categoryServiceImpl;
 
@@ -30,7 +30,6 @@ public class CategoryController extends AbstractController {
 	}
 
 	@GetMapping("/{id}")
-	@PreAuthorize("hasAnyAuthority('ROLE_USER')")
 	public ResponseEntity<CategoryModel> findById(@PathVariable("id") String id) {
 		try {
 			CategoryModel category = categoryServiceImpl.findById(id);

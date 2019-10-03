@@ -16,34 +16,30 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.AuthorServiceImpl;
 import com.library.dao.model.AuthorModel;
-import com.library.dao.model.CategoryModel;
 import com.library.dao.model.criteria.AuthorCriteria;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/authors")
-@Api(value="Author API", description="Author API")
+@Api(value = "Author API", description = "Author API")
 public class AuthorController extends AbstractController {
 	@Autowired
 	AuthorServiceImpl authorServiceImpl;
-	
+
 	@ApiOperation(value = "View a list of authors", response = List.class)
-    @ApiResponses(value = {
-        @ApiResponse(code = 200, message = "Successfully retrieved list"),
-        @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
-        @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
-        @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
-    })
+	@ApiResponses(value = {@ApiResponse(code = 200, message = "Successfully retrieved list"),
+			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found")})
 	@GetMapping
 	public Page<AuthorModel> findCategoryByCriteria(AuthorCriteria criteria) {
 		return authorServiceImpl.findBySearchCriteria(criteria);
 	}
-	
+
 	@ApiOperation(value = "Get a author by id")
 	@GetMapping("/{id}")
 	public ResponseEntity<AuthorModel> findById(@PathVariable("id") String id) {
@@ -57,8 +53,7 @@ public class AuthorController extends AbstractController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<AuthorModel> update(@PathVariable("id") String id,
-			@RequestBody AuthorModel authorFrom) {
+	public ResponseEntity<AuthorModel> update(@PathVariable("id") String id, @RequestBody AuthorModel authorFrom) {
 		try {
 			AuthorModel author = authorServiceImpl.findById(id);
 			author.setName(authorFrom.getName());

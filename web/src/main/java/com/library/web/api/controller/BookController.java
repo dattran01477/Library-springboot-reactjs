@@ -25,23 +25,21 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/books")
-@Api(value="Book API", description="Book API")
+@Api(value = "Book API", description = "Book API")
 public class BookController extends AbstractController {
 	@Autowired
 	BookServiceImpl bookServiceImpl;
-	
+
 	@ApiOperation(value = "View a list of books", response = List.class)
-    @ApiResponses(value = {
-        @ApiResponse(code = 200, message = "Successfully retrieved list"),
-        @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
-        @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
-        @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
-    })
+	@ApiResponses(value = {@ApiResponse(code = 200, message = "Successfully retrieved list"),
+			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found")})
 	@GetMapping
 	public Page<BookModel> findCategoryByCriteria(BookSearchCriteria criteria) {
 		return bookServiceImpl.findBySearchCriteria(criteria);
 	}
-	
+
 	@ApiOperation(value = "Get a book by id")
 	@GetMapping("/{id}")
 	public ResponseEntity<BookModel> findById(@PathVariable("id") String id) {
@@ -55,8 +53,7 @@ public class BookController extends AbstractController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<BookModel> update(@PathVariable("id") String id,
-			@RequestBody BookModel bookFrom) {
+	public ResponseEntity<BookModel> update(@PathVariable("id") String id, @RequestBody BookModel bookFrom) {
 		try {
 			BookModel book = bookServiceImpl.findById(id);
 			book.buildInfo(bookFrom);
