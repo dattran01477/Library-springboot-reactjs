@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.library.bussiness.service.impl.CategoryServiceImpl;
 import com.library.dao.model.CategoryModel;
 import com.library.dao.model.criteria.CategoryCriteria;
+import com.library.web.utils.SecurityContextUtils;
 
 @RestController
 @RequestMapping("/categories")
@@ -25,12 +26,15 @@ public class CategoryController extends AbstractController {
 	CategoryServiceImpl categoryServiceImpl;
 
 	@GetMapping
-	public Page<CategoryModel> findCategoryByCriteria(CategoryCriteria criteria) {
+	public Page<CategoryModel> findCategoryByCriteria(
+			CategoryCriteria criteria) {
+		LOGGER.debug("user name" + SecurityContextUtils.getUserName());
 		return categoryServiceImpl.findBySearchCriteria(criteria);
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<CategoryModel> findById(@PathVariable("id") String id) {
+	public ResponseEntity<CategoryModel> findById(
+			@PathVariable("id") String id) {
 		try {
 			CategoryModel category = categoryServiceImpl.findById(id);
 			return new ResponseEntity<CategoryModel>(category, HttpStatus.OK);
