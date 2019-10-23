@@ -32,12 +32,6 @@ public class HireDetailModel extends AbstractModel implements Serializable {
 	@Field("payment_method")
 	private String paymentMethod;
 
-	@Field("create_date")
-	private LocalDateTime createDate;
-
-	@Field("update_date")
-	private LocalDateTime updateDate;
-
 	@Field("getbook_detail")
 	private ScheduleDetailModel getBookDetail;
 
@@ -76,18 +70,6 @@ public class HireDetailModel extends AbstractModel implements Serializable {
 	}
 	public void setPaymentMethod(String paymentMethod) {
 		this.paymentMethod = paymentMethod;
-	}
-	public LocalDateTime getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(LocalDateTime createDate) {
-		this.createDate = createDate;
-	}
-	public LocalDateTime getUpdateDate() {
-		return updateDate;
-	}
-	public void setUpdateDate(LocalDateTime updateDate) {
-		this.updateDate = updateDate;
 	}
 	public ScheduleDetailModel getGetBookDetail() {
 		return getBookDetail;

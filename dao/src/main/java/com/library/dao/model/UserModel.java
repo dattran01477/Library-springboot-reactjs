@@ -1,10 +1,13 @@
 package com.library.dao.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+
+import com.library.dao.enums.RoleEnum;
 
 @Document("user")
 public class UserModel extends AbstractModel implements Serializable {
@@ -18,6 +21,12 @@ public class UserModel extends AbstractModel implements Serializable {
 
 	@Field("id_student")
 	private String idStudent;
+	
+	@Field("password")
+	private String password;
+	
+	@Field("Hire_Book")
+	private List<HireDetailModel> hireDetails;
 
 	@Field("username")
 	private String username;
@@ -29,7 +38,8 @@ public class UserModel extends AbstractModel implements Serializable {
 	private String status;
 
 	@Field("role")
-	private String role;
+	private RoleEnum role;
+	
 	public String getId() {
 		return id;
 	}
@@ -60,10 +70,17 @@ public class UserModel extends AbstractModel implements Serializable {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getRole() {
+	public RoleEnum getRole() {
 		return role;
 	}
-	public void setRole(String role) {
+	public void setRole(RoleEnum role) {
 		this.role = role;
+	}
+	
+	public List<HireDetailModel> getHireDetails() {
+		return hireDetails;
+	}
+	public void setHireDetails(List<HireDetailModel> hireDetails) {
+		this.hireDetails = hireDetails;
 	}
 }
