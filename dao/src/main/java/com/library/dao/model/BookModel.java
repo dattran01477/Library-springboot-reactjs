@@ -1,15 +1,13 @@
 package com.library.dao.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.util.List;
-
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import com.library.dao.model.child.BookDetailModel;
 import com.library.dao.model.child.ReviewModel;
 
 @Document("book")
@@ -22,60 +20,154 @@ public class BookModel extends AbstractModel implements Serializable {
 
 	@Id
 	private String id;
-
+	
 	@Field("name")
 	private String name;
+	
+	private String isbn;
 
-	@Field("author")
-	private AuthorModel author;
+	@Field("short_description")
+	private String shortDescription;
+	
+	@Field("long_description")
+	private String longDescription;
 
-	@Field("sumary")
-	private String sumary;
-
-	@Field("total_star")
-	private double starTotal;
-
-	@Field("price")
-	private double price;
-
-	@Field("prive_sale_off")
-	private double saleOffPrice;
-
-	@Field("percent_sale")
-	private int percentSale;
+	@Field("cover_price")
+	private double coverPrice;
 
 	@Field("click_view")
 	private int clickViewTotal;
 
-	@Field("link_big_image")
-	private String bigImageLink;
+	@Field("thumbnail")
+	private String thumbnail;
 
-	@Field("link_small_image")
-	private String smallImageLink;
-
-	@Field("type")
-	private String type;
-
-	@Field("category")
-	private List<CategoryModel> category = new ArrayList<CategoryModel>();
-
-	@Field("age_range_from")
-	private int ageRangeFrom;
-
-	@Field("age_range_to")
-	private int ageRangeTo;
-
-	@Field("languae")
-	private String languae;
-
-	@Field("content")
-	private String content;
-
+	@Field("number_page")
+	private int numberPages;
+	
+	@Field("page_size")
+	private String pageSize;
+	
+	@Field("reprint")
+	private int reprint;
+	
+	@Field("released_time")
+	private int releasedTime;
+	
+	@Field("status")
+	private String status;
+	
+	@Field("releaseDate")
+	private LocalDateTime releasedDate;
+	
+	@Field("amount_book")
+	private int amountBook;
+	
 	@Field("reviews")
-	private List<ReviewModel> reviews = new ArrayList<ReviewModel>();
+	private List<ReviewModel> lsReviewModels;
 
-	@Field("book_detail")
-	private BookDetailModel bookDetail;
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	public String getLongDescription() {
+		return longDescription;
+	}
+
+	public void setLongDescription(String longDescription) {
+		this.longDescription = longDescription;
+	}
+
+	public double getCoverPrice() {
+		return coverPrice;
+	}
+
+	public void setCoverPrice(double coverPrice) {
+		this.coverPrice = coverPrice;
+	}
+
+	public int getClickViewTotal() {
+		return clickViewTotal;
+	}
+
+	public void setClickViewTotal(int clickViewTotal) {
+		this.clickViewTotal = clickViewTotal;
+	}
+
+	public String getThumbnail() {
+		return thumbnail;
+	}
+
+	public void setThumbnail(String thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+
+	public int getNumberPages() {
+		return numberPages;
+	}
+
+	public void setNumberPages(int numberPages) {
+		this.numberPages = numberPages;
+	}
+
+	public String getPageSize() {
+		return pageSize;
+	}
+
+	public void setPageSize(String pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public int getReprint() {
+		return reprint;
+	}
+
+	public void setReprint(int reprint) {
+		this.reprint = reprint;
+	}
+
+	public int getReleasedNumber() {
+		return releasedTime;
+	}
+
+	public void setReleasedNumber(int releasedTime) {
+		this.releasedTime = releasedTime;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public LocalDateTime getReleasedDate() {
+		return releasedDate;
+	}
+
+	public void setReleasedDate(LocalDateTime releasedDate) {
+		this.releasedDate = releasedDate;
+	}
+
+	public int getAmoutBook() {
+		return amountBook;
+	}
+
+	public void setAmoutBook(int amoutBook) {
+		this.amountBook = amoutBook;
+	}
 
 	public String getId() {
 		return id;
@@ -93,164 +185,15 @@ public class BookModel extends AbstractModel implements Serializable {
 		this.name = name;
 	}
 
-	public AuthorModel getAuthor() {
-		return author;
+	public List<ReviewModel> getLsReviewModels() {
+		return lsReviewModels;
 	}
 
-	public void setAuthor(AuthorModel author) {
-		this.author = author;
-	}
-
-	public String getSumary() {
-		return sumary;
-	}
-
-	public void setSumary(String sumary) {
-		this.sumary = sumary;
-	}
-
-	public double getStarTotal() {
-		return starTotal;
-	}
-
-	public void setStarTotal(double starTotal) {
-		this.starTotal = starTotal;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public double getSaleOffPrice() {
-		return saleOffPrice;
-	}
-
-	public void setSaleOffPrice(double saleOffPrice) {
-		this.saleOffPrice = saleOffPrice;
-	}
-
-	public int getPercentSale() {
-		return percentSale;
-	}
-
-	public void setPercentSale(int percentSale) {
-		this.percentSale = percentSale;
-	}
-
-	public int getClickViewTotal() {
-		return clickViewTotal;
-	}
-
-	public void setClickViewTotal(int clickViewTotal) {
-		this.clickViewTotal = clickViewTotal;
-	}
-
-	public String getSmallImageLink() {
-		return smallImageLink;
-	}
-
-	public void setSmallImageLink(String smallImageLink) {
-		this.smallImageLink = smallImageLink;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public List<CategoryModel> getCategory() {
-		return category;
-	}
-
-	public void setCategory(List<CategoryModel> category) {
-		this.category = category;
-	}
-
-	public int getAgeRangeFrom() {
-		return ageRangeFrom;
-	}
-
-	public void setAgeRangeFrom(int ageRangeFrom) {
-		this.ageRangeFrom = ageRangeFrom;
-	}
-
-	public int getAgeRangeTo() {
-		return ageRangeTo;
-	}
-
-	public void setAgeRangeTo(int ageRangeTo) {
-		this.ageRangeTo = ageRangeTo;
-	}
-
-	public String getLanguae() {
-		return languae;
-	}
-
-	public void setLanguae(String languae) {
-		this.languae = languae;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public List<ReviewModel> getReviews() {
-		return reviews;
-	}
-
-	public void setReviews(List<ReviewModel> reviews) {
-		this.reviews = reviews;
-	}
-
-	public BookDetailModel getBookDetail() {
-		return bookDetail;
-	}
-
-	public void setBookDetail(BookDetailModel bookDetail) {
-		this.bookDetail = bookDetail;
-	}
-
-	public String getBigImageLink() {
-		return bigImageLink;
-	}
-
-	public void setBigImageLink(String bigImageLink) {
-		this.bigImageLink = bigImageLink;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public void setLsReviewModels(List<ReviewModel> lsReviewModels) {
+		this.lsReviewModels = lsReviewModels;
 	}
 	
 	public void buildInfo(BookModel bookFrom) {
-		this.name = bookFrom.getName();
-		this.author = bookFrom.getAuthor();
-		this.sumary = bookFrom.getSumary();
-		this.starTotal = bookFrom.getStarTotal();
-		this.price = bookFrom.getPrice();
-		this.saleOffPrice = bookFrom.getSaleOffPrice();
-		this.percentSale = bookFrom.getPercentSale();
-		this.clickViewTotal = bookFrom.getClickViewTotal();
-		this.bigImageLink = bookFrom.getBigImageLink();
-		this.smallImageLink = bookFrom.getSmallImageLink();
-		this.type = bookFrom.getType();
-		this.category = bookFrom.getCategory();
-		this.ageRangeFrom = bookFrom.getAgeRangeFrom();
-		this.ageRangeTo = bookFrom.ageRangeTo;
-		this.languae = bookFrom.getLanguae();
-		this.content = bookFrom.getContent();
-		this.reviews = bookFrom.getReviews();
-		this.bookDetail = bookFrom.getBookDetail();
+		
 	}
 }

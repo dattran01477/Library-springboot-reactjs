@@ -6,8 +6,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document("author")
-public class AuthorModel extends AbstractModel implements Serializable {
+@Document("book_location")
+public class BookLocationModel extends AbstractModel implements Serializable {
+
 	/**
 	 * 
 	 */
@@ -15,10 +16,16 @@ public class AuthorModel extends AbstractModel implements Serializable {
 
 	@Id
 	private String id;
-	
+
 	@Field("name")
 	private String name;
-	
+
+	@Field("description")
+	private String description;
+
+	@Field("parentLocationId")
+	private String parentLocationId;
+
 	public String getId() {
 		return id;
 	}
@@ -26,12 +33,28 @@ public class AuthorModel extends AbstractModel implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getParentLocationId() {
+		return parentLocationId;
+	}
+
+	public void setParentLocationId(String parentLocationId) {
+		this.parentLocationId = parentLocationId;
 	}
 }
