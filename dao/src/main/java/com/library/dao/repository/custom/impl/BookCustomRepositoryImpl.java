@@ -3,19 +3,17 @@ package com.library.dao.repository.custom.impl;
 import org.springframework.data.mongodb.core.query.Criteria;
 
 import com.library.dao.model.BookModel;
-import com.library.dao.model.criteria.BookSearchCriteria;
+import com.library.dao.model.criteria.BookCriteria;
 import com.library.dao.repository.custom.BookCustomRepository;
 
-public class BookCustomRepositoryImpl extends AbstractCustomrepositoryImpl<BookModel, BookSearchCriteria>
+public class BookCustomRepositoryImpl extends AbstractCustomrepositoryImpl<BookModel, BookCriteria>
 		implements BookCustomRepository {
 
 	@Override
 	public Criteria buildCriteriaBasic(String query) {
 		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("name").regex(query, "i"),
-				Criteria.where("languae").regex(query, "i"), Criteria.where("content").regex(query, "i"),
-				Criteria.where("category.name").regex(query, "i"), Criteria.where("author.name").regex(query, "i"),
-				Criteria.where("book_detail.publication").regex(query, "i"),
-				Criteria.where("book_detail.imprint").regex(query, "i"));
+				Criteria.where("short_description").regex(query, "i"), Criteria.where("long_description").regex(query, "i"),
+				Criteria.where("released_time").regex(query, "i"), Criteria.where("reviews").regex(query, "i"));
 		return criteria;
 	}
 
@@ -26,9 +24,9 @@ public class BookCustomRepositoryImpl extends AbstractCustomrepositoryImpl<BookM
 	}
 
 	@Override
-	public Class<BookSearchCriteria> typeParameterCriteriaClass() {
+	public Class<BookCriteria> typeParameterCriteriaClass() {
 		// TODO Auto-generated method stub
-		return BookSearchCriteria.class;
+		return BookCriteria.class;
 	}
 
 }

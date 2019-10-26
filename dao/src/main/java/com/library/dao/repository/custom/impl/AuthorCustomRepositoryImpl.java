@@ -11,7 +11,7 @@ public class AuthorCustomRepositoryImpl extends AbstractCustomrepositoryImpl<Aut
 
 	@Override
 	public Criteria buildCriteriaBasic(String query) {
-		System.out.println("find all");
+//		System.out.println("find all");
 		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("name").regex(query, "i"));
 		return criteria;
 	}

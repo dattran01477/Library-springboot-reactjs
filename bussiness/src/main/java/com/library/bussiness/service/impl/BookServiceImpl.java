@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.library.bussiness.service.BookService;
 import com.library.dao.model.BookModel;
 import com.library.dao.model.CategoryModel;
-import com.library.dao.model.criteria.BookSearchCriteria;
+import com.library.dao.model.criteria.BookCriteria;
 import com.library.dao.repository.BookRepository;
 
 @Service
@@ -65,7 +65,7 @@ public class BookServiceImpl extends AbstractService implements BookService {
 	}
 
 	@Override
-	public Page<BookModel> findBySearchCriteria(BookSearchCriteria criteria) {
+	public Page<BookModel> findBySearchCriteria(BookCriteria criteria) {
 		return bookRepository.findAllByCriteria(criteria);
 	}
 
