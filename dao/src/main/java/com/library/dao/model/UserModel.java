@@ -20,31 +20,31 @@ public class UserModel extends AbstractModel implements Serializable {
 
 	@Id
 	private String id;
-	
+
 	@Field(value = "user_name")
 	private String username;
-	
+
 	private String password;
-	
+
 	private String name;
-	
+
 	private String status;
-	
+
 	private String gender;
-	
+
 	private String role;
-	
+
 	private String phoneNumber;
-	
+
 	private String email;
-	
+
 	private String registerCode;
-	
+
 	private String idEditor;
-	
-	private List<PenalizeModel> penalizeModels;//phiếu phạt
-	
-	private List<BorrowingCardModel> borrowingCardModels;//phiếu mượn
+
+	private List<PenalizeModel> penalizeModels;// phiếu phạt
+
+	private List<BorrowingCardModel> borrowingCardModels;// phiếu mượn
 
 	public String getId() {
 		return id;
@@ -148,5 +148,18 @@ public class UserModel extends AbstractModel implements Serializable {
 
 	public void setBorrowingCardModels(List<BorrowingCardModel> borrowingCardModels) {
 		this.borrowingCardModels = borrowingCardModels;
+	}
+
+	public void buildInfo(UserModel userForm) {
+		this.username = userForm.getUsername();
+		this.password = userForm.getPassword();
+		this.name = userForm.getName();
+		this.status = userForm.getStatus();
+		this.gender = userForm.getGender();
+		this.role = userForm.getRole();
+		this.phoneNumber = userForm.getPhoneNumber();
+		this.email = userForm.getEmail();
+		this.registerCode = userForm.getRegisterCode();
+		this.idEditor = userForm.getIdEditor();
 	}
 }

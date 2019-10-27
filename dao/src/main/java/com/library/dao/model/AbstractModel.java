@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class AbstractModel {
 	@Field("create_date")
 	private LocalDateTime createDate;
-	
+
 	@Field("update_date")
 	private LocalDateTime updateDate;
 

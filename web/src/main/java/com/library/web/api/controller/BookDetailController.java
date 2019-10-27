@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.library.bussiness.service.impl.BookServiceImpl;
-import com.library.dao.model.BookModel;
-import com.library.dao.model.criteria.BookCriteria;
+import com.library.bussiness.service.BookDetailService;
+import com.library.dao.model.BookDetailModel;
+import com.library.dao.model.criteria.BookDetailCriteria;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,52 +24,53 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/books")
-@Api(value = "Book API", description = "Book API")
-public class BookController extends AbstractController {
+@RequestMapping("/bookDetails")
+@Api(value = "Book Detail API", description = "Book Detail API")
+public class BookDetailController extends AbstractController {
 	@Autowired
-	BookServiceImpl bookServiceImpl;
+	BookDetailService BookDetailService;
 
-	@ApiOperation(value = "View a list of books", response = List.class)
-	@ApiResponses(value = {@ApiResponse(code = 200, message = "Successfully retrieved list"),
+	@ApiOperation(value = "View a list of book dateil", response = List.class)
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successfully retrieved list"),
 			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
 			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
-			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found")})
+			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
 	@GetMapping
-	public Page<BookModel> findCategoryByCriteria(BookCriteria criteria) {
-		return bookServiceImpl.findBySearchCriteria(criteria);
+	public Page<BookDetailModel> findCategoryByCriteria(BookDetailCriteria criteria) {
+		return BookDetailService.findBySearchCriteria(criteria);
 	}
 
-	@ApiOperation(value = "Get a book by id")
+	@ApiOperation(value = "Get a book detail by id")
 	@GetMapping("/{id}")
-	public ResponseEntity<BookModel> findById(@PathVariable("id") String id) {
+	public ResponseEntity<BookDetailModel> findById(@PathVariable("id") String id) {
 		try {
-			BookModel book = bookServiceImpl.findById(id);
-			return new ResponseEntity<BookModel>(book, HttpStatus.OK);
+			BookDetailModel book = BookDetailService.findById(id);
+			return new ResponseEntity<BookDetailModel>(book, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
-		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<BookDetailModel>(HttpStatus.NOT_FOUND);
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<BookModel> update(@PathVariable("id") String id, @RequestBody BookModel bookFrom) {
+	public ResponseEntity<BookDetailModel> update(@PathVariable("id") String id,
+			@RequestBody BookDetailModel bookForm) {
 		try {
-			BookModel book = bookServiceImpl.findById(id);
-			book.buildInfo(bookFrom);
-			bookServiceImpl.update(book);
-			return new ResponseEntity<BookModel>(book, HttpStatus.OK);
+			BookDetailModel book = BookDetailService.findById(id);
+			book.buildInfo(bookForm);
+			BookDetailService.update(book);
+			return new ResponseEntity<BookDetailModel>(book, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
-		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<BookDetailModel>(HttpStatus.NOT_FOUND);
 	}
 
 	@SuppressWarnings("rawtypes")
 	@DeleteMapping("/{id}")
 	public ResponseEntity delete(@PathVariable("id") String id) {
 		try {
-			bookServiceImpl.delete(id);
+			BookDetailService.delete(id);
 			return new ResponseEntity(HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);

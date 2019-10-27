@@ -46,4 +46,9 @@ public class LanguageModel extends AbstractModel implements Serializable {
 	public void setNote(String note) {
 		this.note = note;
 	}
+
+	public void buildInfo(LanguageModel languageForm) {
+		this.name = languageForm.getName();
+		this.note = languageForm.getNote();
+	}
 }

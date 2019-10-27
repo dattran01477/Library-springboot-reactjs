@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document("detail_book")
-public class BookDetailModel extends AbstractModel implements Serializable  {
+public class BookDetailModel extends AbstractModel implements Serializable {
 
 	/**
 	 * 
@@ -18,31 +18,31 @@ public class BookDetailModel extends AbstractModel implements Serializable  {
 
 	@Id
 	private String id;
-	
+
 	@Field("lsCategories")
 	@DBRef
 	private List<CategoryModel> lsCategories;
-	
+
 	@Field("publisher")
 	@DBRef
 	private PublisherModel publisherModel;
-	
+
 	@Field("language")
 	@DBRef
 	private LanguageModel languageModel;
-	
+
 	@Field("book_location")
 	@DBRef
 	private BookLocationModel bookLocationModel;
-	
+
 	@Field("author")
 	@DBRef
 	private AuthorModel authorModel;
-	
+
 	@Field("book")
 	@DBRef
 	private BookModel bookModel;
-	
+
 	public String getId() {
 		return id;
 	}
@@ -97,5 +97,9 @@ public class BookDetailModel extends AbstractModel implements Serializable  {
 
 	public void setBookModel(BookModel bookModel) {
 		this.bookModel = bookModel;
+	}
+
+	public void buildInfo(BookDetailModel bookForm) {
+		// insert here to update model
 	}
 }

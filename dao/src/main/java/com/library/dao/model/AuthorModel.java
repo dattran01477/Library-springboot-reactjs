@@ -15,10 +15,10 @@ public class AuthorModel extends AbstractModel implements Serializable {
 
 	@Id
 	private String id;
-	
+
 	@Field("name")
 	private String name;
-	
+
 	public String getId() {
 		return id;
 	}
@@ -26,12 +26,16 @@ public class AuthorModel extends AbstractModel implements Serializable {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void buildInfo(AuthorModel authorForm) {
+		this.name = authorForm.getName();
 	}
 }

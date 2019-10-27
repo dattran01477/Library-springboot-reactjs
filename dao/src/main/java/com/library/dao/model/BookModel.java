@@ -20,15 +20,15 @@ public class BookModel extends AbstractModel implements Serializable {
 
 	@Id
 	private String id;
-	
+
 	@Field("name")
 	private String name;
-	
+
 	private String isbn;
 
 	@Field("short_description")
 	private String shortDescription;
-	
+
 	@Field("long_description")
 	private String longDescription;
 
@@ -43,25 +43,25 @@ public class BookModel extends AbstractModel implements Serializable {
 
 	@Field("number_page")
 	private int numberPages;
-	
+
 	@Field("page_size")
 	private String pageSize;
-	
+
 	@Field("reprint")
 	private int reprint;
-	
+
 	@Field("released_time")
 	private int releasedTime;
-	
+
 	@Field("status")
 	private String status;
-	
+
 	@Field("releaseDate")
 	private LocalDateTime releasedDate;
-	
+
 	@Field("amount_book")
 	private int amountBook;
-	
+
 	@Field("reviews")
 	private List<ReviewModel> lsReviewModels;
 
@@ -192,8 +192,21 @@ public class BookModel extends AbstractModel implements Serializable {
 	public void setLsReviewModels(List<ReviewModel> lsReviewModels) {
 		this.lsReviewModels = lsReviewModels;
 	}
-	
-	public void buildInfo(BookModel bookFrom) {
-		
+
+	public void buildInfo(BookModel bookForm) {
+		this.name = bookForm.getName();
+		this.isbn = bookForm.getIsbn();
+		this.shortDescription = bookForm.getShortDescription();
+		this.longDescription = bookForm.getLongDescription();
+		this.coverPrice = bookForm.getCoverPrice();
+		this.clickViewTotal = bookForm.getClickViewTotal();
+		this.thumbnail = bookForm.getThumbnail();
+		this.numberPages = bookForm.getNumberPages();
+		this.pageSize = bookForm.getPageSize();
+		this.reprint = bookForm.getReprint();
+		this.releasedTime = bookForm.getReleasedNumber();
+		this.status = bookForm.getStatus();
+		this.releasedDate = bookForm.getReleasedDate();
+		this.amountBook = bookForm.getAmoutBook();
 	}
 }

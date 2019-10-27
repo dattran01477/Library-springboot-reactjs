@@ -50,4 +50,7 @@ public class English extends AbstractModel implements Serializable {
 		this.startDate = startDate;
 	}
 
+	public void buildInfo(BookModel bookFrom) {
+
+	}
 }

@@ -57,4 +57,10 @@ public class BookLocationModel extends AbstractModel implements Serializable {
 	public void setParentLocationId(String parentLocationId) {
 		this.parentLocationId = parentLocationId;
 	}
+
+	public void buildInfo(BookLocationModel bookForm) {
+		this.name = bookForm.getName();
+		this.parentLocationId = bookForm.getParentLocationId();
+		this.description = bookForm.getDescription();
+	}
 }
