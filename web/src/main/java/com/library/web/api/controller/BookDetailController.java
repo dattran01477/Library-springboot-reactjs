@@ -27,6 +27,7 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping("/bookDetails")
 @Api(value = "Book Detail API", description = "Book Detail API")
 public class BookDetailController extends AbstractController {
+
 	@Autowired
 	BookDetailService BookDetailService;
 

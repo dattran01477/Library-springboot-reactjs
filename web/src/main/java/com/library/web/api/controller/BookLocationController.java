@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.BookLocationService;
 import com.library.dao.model.BookLocationModel;
-import com.library.dao.model.BookModel;
-import com.library.dao.model.criteria.BookCriteria;
 import com.library.dao.model.criteria.BookLocationCriteria;
 
 import io.swagger.annotations.Api;

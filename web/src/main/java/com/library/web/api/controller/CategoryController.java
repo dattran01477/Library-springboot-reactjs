@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,15 +25,13 @@ public class CategoryController extends AbstractController {
 	CategoryServiceImpl categoryServiceImpl;
 
 	@GetMapping
-	public Page<CategoryModel> findCategoryByCriteria(
-			CategoryCriteria criteria) {
+	public Page<CategoryModel> findCategoryByCriteria(CategoryCriteria criteria) {
 		LOGGER.debug("user name" + SecurityContextUtils.getUserName());
 		return categoryServiceImpl.findBySearchCriteria(criteria);
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<CategoryModel> findById(
-			@PathVariable("id") String id) {
+	public ResponseEntity<CategoryModel> findById(@PathVariable("id") String id) {
 		try {
 			CategoryModel category = categoryServiceImpl.findById(id);
 			return new ResponseEntity<CategoryModel>(category, HttpStatus.OK);

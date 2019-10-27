@@ -5,16 +5,21 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.LanguageService;
 import com.library.dao.model.LanguageModel;
 import com.library.dao.model.criteria.LanguageCriteria;
 import com.library.dao.repository.LanguageRepository;
 
+@Service
+@Transactional
 public class LanguageServiceImpl extends AbstractService implements LanguageService {
 
 	@Autowired
 	LanguageRepository languageRepository;
+
 	@Override
 	public List<LanguageModel> findAll() {
 		try {

@@ -1,12 +1,13 @@
 package com.library.dao.repository.custom.impl;
 
-import org.springframework.data.domain.Page;
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.LanguageModel;
 import com.library.dao.model.criteria.LanguageCriteria;
 import com.library.dao.repository.custom.LanguageCustomRepository;
 
+@Repository
 public class LanguageCustomRepositoryImpl extends AbstractCustomrepositoryImpl<LanguageModel, LanguageCriteria>
 	implements LanguageCustomRepository{
 

@@ -53,8 +53,7 @@ public class LanguageController extends AbstractController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<LanguageModel> update(@PathVariable("id") String id,
-			@RequestBody LanguageModel bookForm) {
+	public ResponseEntity<LanguageModel> update(@PathVariable("id") String id, @RequestBody LanguageModel bookForm) {
 		try {
 			LanguageModel book = LanguageService.findById(id);
 			book.buildInfo(bookForm);

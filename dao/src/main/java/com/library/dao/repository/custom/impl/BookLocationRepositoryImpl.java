@@ -1,11 +1,13 @@
 package com.library.dao.repository.custom.impl;
 
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.BookLocationModel;
 import com.library.dao.model.criteria.BookLocationCriteria;
 import com.library.dao.repository.custom.BookLocationCustomRepository;
 
+@Repository
 public class BookLocationRepositoryImpl extends AbstractCustomrepositoryImpl<BookLocationModel, BookLocationCriteria> 
 	implements BookLocationCustomRepository{
 

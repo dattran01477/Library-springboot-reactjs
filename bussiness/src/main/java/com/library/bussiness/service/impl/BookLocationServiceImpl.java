@@ -5,16 +5,21 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.BookLocationService;
 import com.library.dao.model.BookLocationModel;
 import com.library.dao.model.criteria.BookLocationCriteria;
 import com.library.dao.repository.BookLocationRepository;
 
+@Service
+@Transactional
 public class BookLocationServiceImpl extends AbstractService implements BookLocationService {
 
 	@Autowired
 	BookLocationRepository bookLocationRepository;
+
 	@Override
 	public List<BookLocationModel> findAll() {
 		try {

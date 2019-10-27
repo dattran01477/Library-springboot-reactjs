@@ -5,15 +5,20 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.BookDetailService;
 import com.library.dao.model.BookDetailModel;
 import com.library.dao.model.criteria.BookDetailCriteria;
 import com.library.dao.repository.BookDetailRepository;
 
+@Service
+@Transactional
 public class BookDetailServiceImpl extends AbstractService implements BookDetailService {
 	@Autowired
 	BookDetailRepository bookDetailRepository;
+
 	@Override
 	public List<BookDetailModel> findAll() {
 		try {

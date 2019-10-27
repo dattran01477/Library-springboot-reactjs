@@ -18,7 +18,6 @@ public class UserController extends AbstractController {
 
 	@GetMapping
 	public Page<UserModel> getUserByCriteria(UserCriteria userCriteria) {
-		System.out.println("xxx");
 		return userServiceImpl.findBySearchCriteria(userCriteria);
 	}
 }

@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.BookService;
 import com.library.dao.model.BookModel;
-import com.library.dao.model.CategoryModel;
 import com.library.dao.model.criteria.BookCriteria;
 import com.library.dao.repository.BookRepository;
 

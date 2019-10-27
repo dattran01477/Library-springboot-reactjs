@@ -53,8 +53,7 @@ public class PublisherController extends AbstractController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<PublisherModel> update(@PathVariable("id") String id,
-			@RequestBody PublisherModel bookForm) {
+	public ResponseEntity<PublisherModel> update(@PathVariable("id") String id, @RequestBody PublisherModel bookForm) {
 		try {
 			PublisherModel book = PublisherService.findById(id);
 			book.buildInfo(bookForm);

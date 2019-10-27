@@ -5,15 +5,20 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.PublisherService;
 import com.library.dao.model.PublisherModel;
 import com.library.dao.model.criteria.PublisherCriteria;
 import com.library.dao.repository.PublisherRepository;
 
+@Service
+@Transactional
 public class PublisherImpl extends AbstractService implements PublisherService {
 	@Autowired
 	PublisherRepository publisherRepository;
+
 	@Override
 	public List<PublisherModel> findAll() {
 		try {

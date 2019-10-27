@@ -10,10 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.AuthorService;
 import com.library.dao.model.AuthorModel;
-import com.library.dao.model.BookModel;
 import com.library.dao.model.criteria.AuthorCriteria;
 import com.library.dao.repository.AuthorRepository;
-
 
 @Service
 @Transactional
@@ -21,6 +19,7 @@ public class AuthorServiceImpl extends AbstractService implements AuthorService 
 
 	@Autowired
 	AuthorRepository authorRepository;
+
 	@Override
 	public List<AuthorModel> findAll() {
 		try {

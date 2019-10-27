@@ -1,11 +1,13 @@
 package com.library.dao.repository.custom.impl;
 
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.BookDetailModel;
 import com.library.dao.model.criteria.BookDetailCriteria;
 import com.library.dao.repository.custom.BookDetailCustomRepository;
 
+@Repository
 public class BookDetailRepositoryImpl extends AbstractCustomrepositoryImpl<BookDetailModel, BookDetailCriteria>
 	implements BookDetailCustomRepository{
 

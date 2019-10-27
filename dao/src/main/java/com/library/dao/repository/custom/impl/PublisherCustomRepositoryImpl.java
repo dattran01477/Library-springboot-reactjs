@@ -1,13 +1,14 @@
 package com.library.dao.repository.custom.impl;
 
-import org.springframework.data.domain.Page;
 import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.PublisherModel;
 import com.library.dao.model.criteria.PublisherCriteria;
 import com.library.dao.repository.custom.PublisherCustomRepository;
 
-public class PublisherCustomRepositoryImple extends AbstractCustomrepositoryImpl<PublisherModel, PublisherCriteria>
+@Repository
+public class PublisherCustomRepositoryImpl extends AbstractCustomrepositoryImpl<PublisherModel, PublisherCriteria>
 	implements PublisherCustomRepository{
 
 	@Override

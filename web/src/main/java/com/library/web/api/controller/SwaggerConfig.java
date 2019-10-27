@@ -11,6 +11,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
@@ -20,6 +21,7 @@ public class SwaggerConfig {
 				.apis(RequestHandlerSelectors.basePackage("com.library.web.api.controller"))
 				.paths(PathSelectors.regex("/.*")).build().apiInfo(apiEndPointsInfo());
 	}
+
 	private ApiInfo apiEndPointsInfo() {
 		return new ApiInfoBuilder().title("Spring Boot REST API").description("Management REST API")
 				.contact(new Contact("Quan - Dat", "facebook.com", "hquanitute@gmail.com")).license("Apache 2.0")
