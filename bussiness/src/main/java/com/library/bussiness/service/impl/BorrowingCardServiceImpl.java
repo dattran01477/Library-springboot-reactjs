@@ -44,7 +44,7 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 
 	@Override
 	public Page<BorrowingCardModel> findBySearchCriteria(BorrowingCardCriteria criteria) {
-		return borrowingCardRepository.findAllByCriteria(criteria));
+		return borrowingCardRepository.findAllByCriteria(criteria);
 	}
 
 }
