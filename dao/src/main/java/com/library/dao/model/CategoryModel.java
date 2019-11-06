@@ -3,8 +3,11 @@ package com.library.dao.model;
 import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+
+import com.library.dao.enums.StatusEnum;
 
 @Document("category")
 public class CategoryModel extends AbstractModel implements Serializable {
@@ -26,10 +29,11 @@ public class CategoryModel extends AbstractModel implements Serializable {
 	@Field("rank")
 	private long rank;
 
-	@Field("type")
-	private String type;
+	@Field("status")
+	private StatusEnum status;
 
 	@Field("parent")
+	@DBRef
 	private CategoryModel parent;
 
 	public String getId() {
@@ -56,12 +60,12 @@ public class CategoryModel extends AbstractModel implements Serializable {
 		this.rank = rank;
 	}
 
-	public String getType() {
-		return type;
+	public StatusEnum getStatus() {
+		return status;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setStatus(StatusEnum status) {
+		this.status = status;
 	}
 
 	public CategoryModel getParent() {
@@ -83,7 +87,7 @@ public class CategoryModel extends AbstractModel implements Serializable {
 	public void buildInfo(CategoryModel categoryFrom) {
 		this.name = categoryFrom.getName();
 		this.bookTotal = categoryFrom.getBookTotal();
-		this.type = categoryFrom.getType();
+		this.status = categoryFrom.getStatus();
 		this.rank = categoryFrom.getRank();
 		this.parent = categoryFrom.getParent();
 	}

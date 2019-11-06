@@ -10,8 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import com.library.dao.enums.GenderEnum;
 import com.library.dao.enums.RoleEnum;
 import com.library.dao.enums.StatusEnum;
-import com.library.dao.model.child.BorrowingCardModel;
-import com.library.dao.model.child.PenalizeModel;
 
 @Document("user")
 public class UserModel extends AbstractModel implements Serializable {
@@ -53,11 +51,11 @@ public class UserModel extends AbstractModel implements Serializable {
 	@Field(value = "editor_id")
 	private String editorId;
 
-	@Field(value = "penalize_card")
-	private List<PenalizeModel> penalizeModels;// phiếu phạt
+	@Field(value = "penalize_card_ids")
+	private List<String> penalizeIds;// phiếu phạt
 
-	@Field(value = "borrowing_card")
-	private List<BorrowingCardModel> borrowingCardModels;// phiếu mượn
+	@Field(value = "borrowing_card_ids")
+	private List<String> borrowingIds;// phiếu mượn
 
 	public String getId() {
 		return id;
@@ -139,28 +137,28 @@ public class UserModel extends AbstractModel implements Serializable {
 		this.registerCode = registerCode;
 	}
 
-	public List<PenalizeModel> getPenalizeModels() {
-		return penalizeModels;
-	}
-
-	public void setPenalizeModels(List<PenalizeModel> penalizeModels) {
-		this.penalizeModels = penalizeModels;
-	}
-
-	public List<BorrowingCardModel> getBorrowingCardModels() {
-		return borrowingCardModels;
-	}
-
-	public void setBorrowingCardModels(List<BorrowingCardModel> borrowingCardModels) {
-		this.borrowingCardModels = borrowingCardModels;
-	}
-
 	public String getEditorId() {
 		return editorId;
 	}
 
 	public void setEditorId(String editorId) {
 		this.editorId = editorId;
+	}
+
+	public List<String> getPenalizeIds() {
+		return penalizeIds;
+	}
+
+	public void setPenalizeIds(List<String> penalizeIds) {
+		this.penalizeIds = penalizeIds;
+	}
+
+	public List<String> getBorrowingIds() {
+		return borrowingIds;
+	}
+
+	public void setBorrowingIds(List<String> borrowingIds) {
+		this.borrowingIds = borrowingIds;
 	}
 
 	public void buildInfo(UserModel userForm) {
@@ -171,9 +169,9 @@ public class UserModel extends AbstractModel implements Serializable {
 		this.email = userForm.getEmail();
 		this.registerCode = userForm.getRegisterCode();
 		this.editorId = userForm.getEditorId();
-		this.borrowingCardModels = userForm.getBorrowingCardModels();
+		this.borrowingIds = userForm.getBorrowingIds();
+		this.penalizeIds = userForm.getPenalizeIds();
 		this.gender = userForm.getGender();
-		this.penalizeModels = userForm.getPenalizeModels();
 		this.role = userForm.getRole();
 		this.status = userForm.getStatus();
 	}

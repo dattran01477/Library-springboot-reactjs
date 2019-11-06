@@ -19,6 +19,9 @@ public class LanguageModel extends AbstractModel implements Serializable {
 
 	@Field("name")
 	private String name;
+	
+	@Field("code")
+	private String code;
 
 	@Field("note")
 	private String note;
@@ -45,6 +48,14 @@ public class LanguageModel extends AbstractModel implements Serializable {
 
 	public void setNote(String note) {
 		this.note = note;
+	}
+	
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public void buildInfo(LanguageModel languageForm) {

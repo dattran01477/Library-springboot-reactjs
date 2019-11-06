@@ -1,19 +1,26 @@
-package com.library.dao.model.child;
+package com.library.dao.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document
+@Document("borrowing-card-detail")
 public class BorrowingCardModel {
 
-	@Field("borrow_id")
+	@Id
 	private String id;
 
 	@Field("book_id")
 	private String bookId;
+	
+	@Field("user_id")
+	private String userId;
 
 	@Field("type")
 	private String type;
+	
+	@Field("status")
+	private String status;
 
 	@Field("borrow_date")
 	private String borrowDate;
@@ -60,5 +67,20 @@ public class BorrowingCardModel {
 	public void setBorrowDate(String borrowDate) {
 		this.borrowDate = borrowDate;
 	}
+	
+	public String getStatus() {
+		return status;
+	}
 
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 }

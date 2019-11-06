@@ -1,18 +1,22 @@
-package com.library.dao.model.child;
+package com.library.dao.model;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
 public class PenalizeModel {
 	
-	@Field("penalize_id")
+	@Id
 	private String id;
 
 	@Field("reason")
 	private String reason;
+	
+	@Field("user_id")
+	private String userId;
 	
 	@Field("penalize_date")
 	private LocalDateTime penalizeDate;
@@ -36,7 +40,6 @@ public class PenalizeModel {
 		this.reason = reason;
 	}
 	
-
 	public LocalDateTime getPenalizeDate() {
 		return penalizeDate;
 	}
@@ -51,5 +54,13 @@ public class PenalizeModel {
 
 	public void setEditorId(String editorId) {
 		this.editorId = editorId;
+	}
+	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 }
