@@ -1,11 +1,13 @@
 package com.library.dao.model;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document("borrowing-card-detail")
-public class BorrowingCardModel {
+public class BorrowingCardModel extends AbstractModel implements Serializable{
 
 	@Id
 	private String id;

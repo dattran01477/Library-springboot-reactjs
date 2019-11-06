@@ -1,6 +1,7 @@
 package com.library.web.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.PenalizeServiceImpl;
 import com.library.dao.model.PenalizeModel;
+import com.library.dao.model.criteria.PenalizeCriteria;
 
 @RestController
 @RequestMapping("/penalize-card")
@@ -21,6 +23,11 @@ public class PenalizeController extends AbstractController {
 	@Autowired
 	PenalizeServiceImpl penalizeServiceImpl;
 
+	@GetMapping
+	public Page<PenalizeModel> findCategoryByCriteria(PenalizeCriteria criteria) {
+		return penalizeServiceImpl.findBySearchCriteria(criteria);
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<PenalizeModel> findById(@PathVariable("id") String id) {
 		try {

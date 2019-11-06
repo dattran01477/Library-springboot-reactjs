@@ -1,6 +1,7 @@
 package com.library.web.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.BorrowingCardServiceImpl;
 import com.library.dao.model.BorrowingCardModel;
+import com.library.dao.model.criteria.BorrowingCardCriteria;
 
 @RestController
 @RequestMapping("/borrowing-card")
@@ -21,6 +23,11 @@ public class BorrowingController extends AbstractController {
 	@Autowired
 	BorrowingCardServiceImpl borrwingCardServiceImpl;
 
+	@GetMapping
+	public Page<BorrowingCardModel> findCategoryByCriteria(BorrowingCardCriteria criteria) {
+		return borrwingCardServiceImpl.findBySearchCriteria(criteria);
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<BorrowingCardModel> findById(@PathVariable("id") String id) {
 		try {
