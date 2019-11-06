@@ -14,7 +14,7 @@ public class BookDetailRepositoryImpl extends AbstractCustomrepositoryImpl<BookD
 	@Override
 	public Criteria buildCriteriaBasic(String query) {
 		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("publisherModel.name").regex(query, "i"),
-				Criteria.where("languageModel.name").regex(query, "i"));
+				Criteria.where("languageModel.name").regex(query, "i"),Criteria.where("book").regex(query, "i"));
 		return criteria;
 	}
 
