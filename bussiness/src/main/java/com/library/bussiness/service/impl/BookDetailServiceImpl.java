@@ -67,4 +67,9 @@ public class BookDetailServiceImpl extends AbstractService implements BookDetail
 	public Page<BookDetailModel> findBySearchCriteria(BookDetailCriteria criteria) {
 		return bookDetailRepository.findAllByCriteria(criteria);
 	}
+	
+	@Override
+	public BookDetailModel findByBookModelId(String id) {
+		return bookDetailRepository.findByBookModelId(id);
+	}
 }

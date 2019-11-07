@@ -5,5 +5,5 @@ import com.library.dao.model.criteria.BookDetailCriteria;
 
 
 public interface BookDetailService extends GenericService<BookDetailModel, String, BookDetailCriteria> {
-
+	public BookDetailModel findByBookModelId(String id);
 }
