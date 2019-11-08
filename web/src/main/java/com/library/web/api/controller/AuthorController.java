@@ -1,9 +1,15 @@
 package com.library.web.api.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +30,8 @@ public class AuthorController extends AbstractController {
 	AuthorServiceImpl authorServiceImpl;
 
 	@GetMapping
+	@MessageMapping("newAuthor")
+	@SendTo("/topic/author")
 	public Page<AuthorModel> findCategoryByCriteria(AuthorCriteria criteria) {
 		return authorServiceImpl.findBySearchCriteria(criteria);
 	}
@@ -38,20 +46,25 @@ public class AuthorController extends AbstractController {
 		}
 		return new ResponseEntity<AuthorModel>(HttpStatus.NOT_FOUND);
 	}
-	
-	@PostMapping
-	public ResponseEntity<AuthorModel> addNew(@RequestBody AuthorModel authorFrom) {
-		try {
-			AuthorModel authorModel = authorServiceImpl.create(authorFrom);
-			return new ResponseEntity<AuthorModel>(authorModel, HttpStatus.OK);
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-		}
-		return new ResponseEntity<AuthorModel>(HttpStatus.NOT_FOUND);
-	} 
+
+//	@GetMapping
+//	public List<AuthorModel> addNew(@RequestBody AuthorModel authorFrom) {
+//		List<AuthorModel> lsAuthor = new ArrayList<AuthorModel>();
+//		try {
+//			AuthorModel authorModel = authorServiceImpl.create(authorFrom);
+//			if (authorModel != null) {
+//				lsAuthor = authorServiceImpl.findAll();
+//			}
+//			return lsAuthor;
+//		} catch (Exception e) {
+//			LOGGER.error(e.getMessage(), e);
+//		}
+//		return lsAuthor;
+//	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<AuthorModel> update(@PathVariable("id") String id, @RequestBody AuthorModel authorFrom) {
+	public ResponseEntity<AuthorModel> update(@PathVariable("id") String id,
+			@RequestBody AuthorModel authorFrom) {
 		try {
 			AuthorModel author = authorServiceImpl.findById(id);
 			author.setName(authorFrom.getName());
