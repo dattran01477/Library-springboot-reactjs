@@ -28,7 +28,18 @@ public class BookDetailController extends AbstractController {
 	public Page<BookDetailModel> findCategoryByCriteria(BookDetailCriteria criteria) {
 		return bookDetailService.findBySearchCriteria(criteria);
 	}
-
+	
+	@GetMapping("/book/{id}")
+	public ResponseEntity<BookDetailModel> findByBookModelId(@PathVariable("id") String id) {
+		try {
+			BookDetailModel book = bookDetailService.findByBookModelId(id);
+			return new ResponseEntity<BookDetailModel>(book, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<BookDetailModel>(HttpStatus.NOT_FOUND);
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<BookDetailModel> findById(@PathVariable("id") String id) {
 		try {

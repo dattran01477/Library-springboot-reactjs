@@ -12,7 +12,7 @@ import com.library.dao.model.criteria.BorrowingCardCriteria;
 import com.library.dao.repository.BorrowingCardRepository;
 
 @Service
-public class BorrowingCardServiceImpl implements BorrowingCardService {
+public class BorrowingCardServiceImpl extends AbstractService implements BorrowingCardService {
 
 	@Autowired
 	BorrowingCardRepository borrowingCardRepository;
@@ -44,7 +44,7 @@ public class BorrowingCardServiceImpl implements BorrowingCardService {
 
 	@Override
 	public Page<BorrowingCardModel> findBySearchCriteria(BorrowingCardCriteria criteria) {
-		return null;
+		return borrowingCardRepository.findAllByCriteria(criteria);
 	}
 
 }
