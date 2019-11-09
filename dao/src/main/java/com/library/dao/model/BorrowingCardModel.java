@@ -9,6 +9,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document("borrowing-card-detail")
 public class BorrowingCardModel extends AbstractModel implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String id;
 
