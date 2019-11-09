@@ -46,5 +46,9 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 	public Page<BorrowingCardModel> findBySearchCriteria(BorrowingCardCriteria criteria) {
 		return borrowingCardRepository.findAllByCriteria(criteria);
 	}
-
+	
+	@Override
+	public BorrowingCardModel findByUserId(String userId) {
+		return borrowingCardRepository.findByUserId(userId);
+	}
 }

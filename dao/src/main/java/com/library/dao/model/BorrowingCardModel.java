@@ -1,6 +1,8 @@
 package com.library.dao.model;
 
 import java.io.Serializable;
+import java.sql.Date;
+import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -25,7 +27,7 @@ public class BorrowingCardModel extends AbstractModel implements Serializable{
 	private String status;
 
 	@Field("borrow_date")
-	private String borrowDate;
+	private LocalDateTime borrowDate;
 
 	@Field("editor_id")
 	private String editorId;

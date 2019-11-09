@@ -6,5 +6,5 @@ import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.repository.custom.BorrowingCardCustomRepository;
 
 public interface BorrowingCardRepository extends MongoRepository<BorrowingCardModel, String>, BorrowingCardCustomRepository {
-
+	BorrowingCardModel findByUserId(String userID);
 }

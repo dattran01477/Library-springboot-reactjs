@@ -73,4 +73,15 @@ public class BorrowingController extends AbstractController {
 		}
 		return new ResponseEntity(HttpStatus.NOT_FOUND);
 	}
+	
+	@GetMapping("submitted/{id}")
+	public ResponseEntity<BorrowingCardModel> findByUserId(@PathVariable("id") String id) {
+		try {
+			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findByUserId(id);
+			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
+	}
 }
