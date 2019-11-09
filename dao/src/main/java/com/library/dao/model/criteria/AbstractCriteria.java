@@ -12,7 +12,7 @@ public abstract class AbstractCriteria {
 
 	private int pageIndex = AppConstant.DEFAULT_PAGE_INDEX;
 
-	private Direction sortDirection = Direction.ASC;
+	private Direction sortDirection = Direction.DESC;
 
 	private String sortField;
 

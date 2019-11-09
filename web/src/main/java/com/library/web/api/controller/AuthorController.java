@@ -1,9 +1,14 @@
 package com.library.web.api.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.AuthorServiceImpl;
 import com.library.dao.model.AuthorModel;
+import com.library.dao.model.BookModel;
 import com.library.dao.model.criteria.AuthorCriteria;
 
 @RestController
@@ -24,13 +30,14 @@ public class AuthorController extends AbstractController {
 	AuthorServiceImpl authorServiceImpl;
 
 	@GetMapping
-	public Page<AuthorModel> findCategoryByCriteria(AuthorCriteria criteria) {
-		return authorServiceImpl.findBySearchCriteria(criteria);
+	public Page<AuthorModel> findCategoryByCriteria(AuthorCriteria authorCriteria) {
+		return authorServiceImpl.findBySearchCriteria(authorCriteria);
 	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<AuthorModel> findById(@PathVariable("id") String id) {
 		try {
+			System.out.println("abc");
 			AuthorModel author = authorServiceImpl.findById(id);
 			return new ResponseEntity<AuthorModel>(author, HttpStatus.OK);
 		} catch (Exception e) {
@@ -38,17 +45,17 @@ public class AuthorController extends AbstractController {
 		}
 		return new ResponseEntity<AuthorModel>(HttpStatus.NOT_FOUND);
 	}
-	
-	@PostMapping
-	public ResponseEntity<AuthorModel> addNew(@RequestBody AuthorModel authorFrom) {
-		try {
-			AuthorModel authorModel = authorServiceImpl.create(authorFrom);
-			return new ResponseEntity<AuthorModel>(authorModel, HttpStatus.OK);
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-		}
-		return new ResponseEntity<AuthorModel>(HttpStatus.NOT_FOUND);
-	} 
+
+//	@MessageMapping("/addNew")
+//	@SendTo("/topic/list")
+//	public List<AuthorModel> addNew(@RequestBody AuthorModel bookFrom) {
+//		try {
+//			authorServiceImpl.create(bookFrom);
+//		} catch (Exception e) {
+//			LOGGER.error(e.getMessage(), e);
+//		}
+//		return authorServiceImpl.findAll();
+//	}
 
 	@PutMapping("/{id}")
 	public ResponseEntity<AuthorModel> update(@PathVariable("id") String id, @RequestBody AuthorModel authorFrom) {
