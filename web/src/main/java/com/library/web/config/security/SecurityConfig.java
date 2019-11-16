@@ -3,7 +3,6 @@ package com.library.web.config.security;
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;
-import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
 import org.keycloak.adapters.springsecurity.client.KeycloakClientRequestFactory;
 import org.keycloak.adapters.springsecurity.client.KeycloakRestTemplate;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
@@ -21,17 +20,19 @@ import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper
 import org.springframework.security.web.authentication.session.NullAuthenticatedSessionStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 
+import com.library.web.config.security.provider.authentication.ApplicationAuthenticationProvider;
+
 @Configuration
 @ComponentScan(basePackageClasses = KeycloakSecurityComponents.class, excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "org.keycloak.adapters.springsecurity.management.HttpSessionManager"))
 @EnableWebSecurity
-@SuppressWarnings({"rawtypes", "unchecked"})
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
+
 	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth)
-			throws Exception {
-		KeycloakAuthenticationProvider keycloakAuthenticationProvider = keycloakAuthenticationProvider();
-		keycloakAuthenticationProvider
-				.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
+	ApplicationAuthenticationProvider keycloakAuthenticationProvider;
+
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
 		auth.authenticationProvider(keycloakAuthenticationProvider);
 	}
 
@@ -58,8 +59,8 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		super.configure(http);
-		http.authorizeRequests().antMatchers("/categoriess")
-				.hasRole("User").anyRequest().permitAll().and().csrf()
-				.disable();
+		http.authorizeRequests().antMatchers("/users").hasRole("User")
+								.antMatchers("/auth").hasRole("User")
+								.anyRequest().permitAll().and().csrf().disable();
 	}
 }

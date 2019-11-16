@@ -51,4 +51,10 @@ public class UserServiceImpl extends AbstractService implements UserService {
 		// TODO Auto-generated method stub
 		return userRepository.findAllByCriteria(criteria);
 	}
+
+	@Override
+	public UserModel findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return userRepository.findByUsername(username);
+	}
 }

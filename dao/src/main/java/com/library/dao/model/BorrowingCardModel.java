@@ -1,7 +1,6 @@
 package com.library.dao.model;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.Id;
@@ -69,11 +68,11 @@ public class BorrowingCardModel extends AbstractModel implements Serializable{
 		this.type = type;
 	}
 
-	public String getBorrowDate() {
+	public LocalDateTime getBorrowDate() {
 		return borrowDate;
 	}
 
-	public void setBorrowDate(String borrowDate) {
+	public void setBorrowDate(LocalDateTime borrowDate) {
 		this.borrowDate = borrowDate;
 	}
 	

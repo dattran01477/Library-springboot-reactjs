@@ -51,6 +51,8 @@ public class UserController extends AbstractController {
 		}
 		return new ResponseEntity<UserModel>(HttpStatus.NOT_FOUND);
 	}
+	
+	
 
 	@PutMapping("/{id}")
 	public ResponseEntity<UserModel> update(@PathVariable("id") String id,
