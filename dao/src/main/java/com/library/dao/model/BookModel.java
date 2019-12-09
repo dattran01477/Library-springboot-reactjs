@@ -8,8 +8,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import com.library.dao.model.child.ReviewModel;
-
 @Document("book")
 public class BookModel extends AbstractModel implements Serializable {
 
@@ -62,8 +60,20 @@ public class BookModel extends AbstractModel implements Serializable {
 	@Field("amount_book")
 	private int amountBook;
 
-	@Field("reviews")
-	private List<ReviewModel> lsReviewModels;
+	@Field("categories")
+	private List<CategoryModel> categories;
+
+	@Field("authors")
+	private AuthorModel authors;
+
+	@Field("publisher")
+	private PublisherModel publisher;
+
+	@Field("language")
+	private LanguageModel language;
+
+	@Field("bookLocation")
+	private BookLocationModel bookLocation;
 
 	public String getIsbn() {
 		return isbn;
@@ -185,12 +195,60 @@ public class BookModel extends AbstractModel implements Serializable {
 		this.name = name;
 	}
 
-	public List<ReviewModel> getLsReviewModels() {
-		return lsReviewModels;
+	public int getReleasedTime() {
+		return releasedTime;
 	}
 
-	public void setLsReviewModels(List<ReviewModel> lsReviewModels) {
-		this.lsReviewModels = lsReviewModels;
+	public void setReleasedTime(int releasedTime) {
+		this.releasedTime = releasedTime;
+	}
+
+	public int getAmountBook() {
+		return amountBook;
+	}
+
+	public void setAmountBook(int amountBook) {
+		this.amountBook = amountBook;
+	}
+
+	public List<CategoryModel> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(List<CategoryModel> categories) {
+		this.categories = categories;
+	}
+
+	public AuthorModel getAuthors() {
+		return authors;
+	}
+
+	public void setAuthors(AuthorModel authors) {
+		this.authors = authors;
+	}
+
+	public PublisherModel getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(PublisherModel publisher) {
+		this.publisher = publisher;
+	}
+
+	public LanguageModel getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(LanguageModel language) {
+		this.language = language;
+	}
+
+	public BookLocationModel getBookLocation() {
+		return bookLocation;
+	}
+
+	public void setBookLocation(BookLocationModel bookLocation) {
+		this.bookLocation = bookLocation;
 	}
 
 	public void buildInfo(BookModel bookForm) {

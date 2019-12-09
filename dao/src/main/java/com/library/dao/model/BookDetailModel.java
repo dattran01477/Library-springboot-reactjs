@@ -8,6 +8,8 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.library.dao.model.child.ReviewModel;
+
 @Document("detail_book")
 public class BookDetailModel extends AbstractModel implements Serializable {
 
@@ -42,6 +44,9 @@ public class BookDetailModel extends AbstractModel implements Serializable {
 	@Field("book")
 	@DBRef
 	private BookModel bookModel;
+
+	@Field("reviews")
+	private List<ReviewModel> lsReviewModels;
 
 	public String getId() {
 		return id;
@@ -97,6 +102,14 @@ public class BookDetailModel extends AbstractModel implements Serializable {
 
 	public void setBookModel(BookModel bookModel) {
 		this.bookModel = bookModel;
+	}
+
+	public List<ReviewModel> getLsReviewModels() {
+		return lsReviewModels;
+	}
+
+	public void setLsReviewModels(List<ReviewModel> lsReviewModels) {
+		this.lsReviewModels = lsReviewModels;
 	}
 
 	public void buildInfo(BookDetailModel bookForm) {
