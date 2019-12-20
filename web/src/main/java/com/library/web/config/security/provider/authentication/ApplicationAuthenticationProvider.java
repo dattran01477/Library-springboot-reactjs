@@ -50,8 +50,7 @@ public class ApplicationAuthenticationProvider implements AuthenticationProvider
 			user.setUsername(usernameKc);
 			user.setEmail(usernameKc);
 			user.setStatus(StatusEnum.ACTIVE);
-			user.setRole(RoleEnum.USER);
-			
+			user.setRole(RoleEnum.USER);	
 			userService.create(user);
 		}
 

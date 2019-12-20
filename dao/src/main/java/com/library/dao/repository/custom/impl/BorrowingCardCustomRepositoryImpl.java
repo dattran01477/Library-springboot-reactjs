@@ -3,11 +3,8 @@ package com.library.dao.repository.custom.impl;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
-import com.library.dao.model.AuthorModel;
 import com.library.dao.model.BorrowingCardModel;
-import com.library.dao.model.criteria.AuthorCriteria;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
-import com.library.dao.repository.custom.AuthorCustomRepository;
 
 @Repository
 public class BorrowingCardCustomRepositoryImpl extends AbstractCustomrepositoryImpl<BorrowingCardModel, BorrowingCardCriteria>

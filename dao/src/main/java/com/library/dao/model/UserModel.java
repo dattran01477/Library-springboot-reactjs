@@ -1,6 +1,7 @@
 package com.library.dao.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -51,11 +52,11 @@ public class UserModel extends AbstractModel implements Serializable {
 	@Field(value = "editor_id")
 	private String editorId;
 
-	@Field(value = "penalize_card_ids")
-	private List<String> penalizeIds;// phiếu phạt
+	@Field(value = "penalize_cards")
+	private List<PenalizeModel> penalizes = new ArrayList<PenalizeModel>();// phiếu phạt
 
-	@Field(value = "borrowing_card_ids")
-	private List<String> borrowingIds;// phiếu mượn
+	@Field(value = "borrowing_cards")
+	private List<BorrowingCardModel> borrowings = new ArrayList<BorrowingCardModel>();// phiếu mượn
 
 	public String getId() {
 		return id;
@@ -144,21 +145,21 @@ public class UserModel extends AbstractModel implements Serializable {
 	public void setEditorId(String editorId) {
 		this.editorId = editorId;
 	}
-
-	public List<String> getPenalizeIds() {
-		return penalizeIds;
+	
+	public List<PenalizeModel> getPenalizes() {
+		return penalizes;
 	}
 
-	public void setPenalizeIds(List<String> penalizeIds) {
-		this.penalizeIds = penalizeIds;
+	public void setPenalizes(List<PenalizeModel> penalizes) {
+		this.penalizes = penalizes;
 	}
 
-	public List<String> getBorrowingIds() {
-		return borrowingIds;
+	public List<BorrowingCardModel> getBorrowings() {
+		return borrowings;
 	}
 
-	public void setBorrowingIds(List<String> borrowingIds) {
-		this.borrowingIds = borrowingIds;
+	public void setBorrowings(List<BorrowingCardModel> borrowings) {
+		this.borrowings = borrowings;
 	}
 
 	public void buildInfo(UserModel userForm) {
@@ -169,8 +170,6 @@ public class UserModel extends AbstractModel implements Serializable {
 		this.email = userForm.getEmail();
 		this.registerCode = userForm.getRegisterCode();
 		this.editorId = userForm.getEditorId();
-		this.borrowingIds = userForm.getBorrowingIds();
-		this.penalizeIds = userForm.getPenalizeIds();
 		this.gender = userForm.getGender();
 		this.role = userForm.getRole();
 		this.status = userForm.getStatus();

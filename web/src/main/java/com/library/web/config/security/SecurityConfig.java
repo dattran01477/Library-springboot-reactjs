@@ -31,6 +31,9 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 	ApplicationAuthenticationProvider keycloakAuthenticationProvider;
 
 	@Autowired
+	public KeycloakClientRequestFactory keycloakClientRequestFactory;
+
+	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(new SimpleAuthorityMapper());
 		auth.authenticationProvider(keycloakAuthenticationProvider);
@@ -47,9 +50,6 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 		return new KeycloakSpringBootConfigResolver();
 	}
 
-	@Autowired
-	public KeycloakClientRequestFactory keycloakClientRequestFactory;
-
 	@Bean
 	@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 	public KeycloakRestTemplate keycloakRestTemplate() {
@@ -59,8 +59,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		super.configure(http);
-		http.authorizeRequests().antMatchers("/users").hasRole("User")
-								.antMatchers("/auth").hasRole("User")
-								.anyRequest().permitAll().and().csrf().disable();
+		http.authorizeRequests().antMatchers("/users", "/books", "/auth", "/borrowing-card").hasRole("User")
+				.anyRequest().permitAll().and().csrf().disable();
 	}
 }

@@ -2,6 +2,7 @@ package com.library.dao.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,8 +19,8 @@ public class BorrowingCardModel extends AbstractModel implements Serializable{
 	@Id
 	private String id;
 
-	@Field("book_id")
-	private String bookId;
+	@Field("book_ids")
+	private List<String> bookId;
 	
 	@Field("user_id")
 	private String userId;
@@ -43,14 +44,14 @@ public class BorrowingCardModel extends AbstractModel implements Serializable{
 	public void setId(String id) {
 		this.id = id;
 	}
-
-	public String getBookId() {
+	
+	public List<String> getBookId() {
 		return bookId;
 	}
 
-	public void setBookId(String bookId) {
+	public void setBookId(List<String> bookId) {
 		this.bookId = bookId;
-	}
+	} 
 
 	public String getEditorId() {
 		return editorId;
