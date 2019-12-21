@@ -69,4 +69,25 @@ public class BookServiceImpl extends AbstractService implements BookService {
 	public Page<BookModel> findBySearchCriteria(BookCriteria criteria) {
 		return bookRepository.findAllByCriteria(criteria);
 	}
+
+	@Override
+	public boolean updateTotalBookAvailable(List<String> bookIds) {
+		int countUpdated = 0;
+		int countStart = bookIds.size();
+		for (String id : bookIds) {
+			BookModel bookModel = bookRepository.findById(id).get();
+			if (bookModel != null) {
+				bookModel.setAmountBook(bookModel.getAmountBook() - 1);
+				bookRepository.save(bookModel);
+				countUpdated++;
+			}
+
+		}
+
+		if (countStart == countUpdated) {
+			return true;
+		}
+
+		return false;
+	}
 }

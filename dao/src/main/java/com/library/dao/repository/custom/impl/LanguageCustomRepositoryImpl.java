@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.LanguageModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.LanguageCriteria;
 import com.library.dao.repository.custom.LanguageCustomRepository;
 
@@ -12,9 +13,8 @@ public class LanguageCustomRepositoryImpl extends AbstractCustomrepositoryImpl<L
 	implements LanguageCustomRepository{
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("name").regex(query, "i"),
-				Criteria.where("note").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

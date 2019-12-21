@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.BookDetailModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.BookDetailCriteria;
 import com.library.dao.repository.custom.BookDetailCustomRepository;
 
@@ -12,9 +13,8 @@ public class BookDetailRepositoryImpl extends AbstractCustomrepositoryImpl<BookD
 	implements BookDetailCustomRepository{
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("publisherModel.name").regex(query, "i"),
-				Criteria.where("languageModel.name").regex(query, "i"),Criteria.where("bookModel.id").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

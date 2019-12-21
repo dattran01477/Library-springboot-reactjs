@@ -6,7 +6,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document("publisher")
+@Getter
+@Setter
 public class PublisherModel extends AbstractModel implements Serializable {
 
 	/**
@@ -22,30 +27,6 @@ public class PublisherModel extends AbstractModel implements Serializable {
 
 	@Field("note")
 	private String note;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getNote() {
-		return note;
-	}
-
-	public void setNote(String note) {
-		this.note = note;
-	}
 
 	public void buildInfo(PublisherModel publisherModel) {
 		this.name = publisherModel.getName();

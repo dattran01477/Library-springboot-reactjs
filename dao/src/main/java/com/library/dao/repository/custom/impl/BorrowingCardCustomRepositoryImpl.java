@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.BorrowingCardModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
 
 @Repository
@@ -11,11 +12,8 @@ public class BorrowingCardCustomRepositoryImpl extends AbstractCustomrepositoryI
 		implements com.library.dao.repository.custom.BorrowingCardCustomRepository {
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-//		System.out.println("find all");
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("book_id").regex(query, "i"),
-				Criteria.where("user_id").regex(query, "i"), Criteria.where("type").regex(query, "i"),
-				Criteria.where("status").regex(query, "i"), Criteria.where("borrow_date").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

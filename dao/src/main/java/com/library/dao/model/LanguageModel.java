@@ -6,7 +6,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document("language")
+@Getter
+@Setter
 public class LanguageModel extends AbstractModel implements Serializable {
 
 	/**
@@ -19,44 +24,12 @@ public class LanguageModel extends AbstractModel implements Serializable {
 
 	@Field("name")
 	private String name;
-	
+
 	@Field("code")
 	private String code;
 
 	@Field("note")
 	private String note;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getNote() {
-		return note;
-	}
-
-	public void setNote(String note) {
-		this.note = note;
-	}
-	
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
 
 	public void buildInfo(LanguageModel languageForm) {
 		this.name = languageForm.getName();

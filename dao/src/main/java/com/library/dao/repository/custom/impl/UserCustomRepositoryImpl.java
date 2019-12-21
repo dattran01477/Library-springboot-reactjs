@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.UserModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.UserCriteria;
 import com.library.dao.repository.custom.UserCustomRepository;
 
@@ -12,7 +13,7 @@ public class UserCustomRepositoryImpl extends AbstractCustomrepositoryImpl<UserM
 	
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
 		// TODO Auto-generated method stub
 		return null;
 	}

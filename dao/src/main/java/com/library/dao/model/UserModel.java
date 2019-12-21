@@ -12,7 +12,12 @@ import com.library.dao.enums.GenderEnum;
 import com.library.dao.enums.RoleEnum;
 import com.library.dao.enums.StatusEnum;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document("user")
+@Getter
+@Setter
 public class UserModel extends AbstractModel implements Serializable {
 	/**
 	 * 
@@ -28,8 +33,26 @@ public class UserModel extends AbstractModel implements Serializable {
 	@Field(value = "password")
 	private String password;
 
+	@Field(value = "firstName")
+	private String firstName;
+
+	@Field(value = "fbAccount")
+	private String fbAccount;
+
+	@Field(value = "instaAccount")
+	private String instaAccount;
+
+	@Field(value = "linkedAccount")
+	private String linkedAccount;
+
+	@Field(value = "lastName")
+	private String lastName;
+
 	@Field(value = "name")
 	private String name;
+
+	@Field(value = "avatarThumnail")
+	private String avatarThumnail;
 
 	@Field(value = "status")
 	private StatusEnum status;
@@ -57,110 +80,6 @@ public class UserModel extends AbstractModel implements Serializable {
 
 	@Field(value = "borrowing_cards")
 	private List<BorrowingCardModel> borrowings = new ArrayList<BorrowingCardModel>();// phiếu mượn
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public StatusEnum getStatus() {
-		return status;
-	}
-
-	public void setStatus(StatusEnum status) {
-		this.status = status;
-	}
-
-	public GenderEnum getGender() {
-		return gender;
-	}
-
-	public void setGender(GenderEnum gender) {
-		this.gender = gender;
-	}
-
-	public RoleEnum getRole() {
-		return role;
-	}
-
-	public void setRole(RoleEnum role) {
-		this.role = role;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getRegisterCode() {
-		return registerCode;
-	}
-
-	public void setRegisterCode(String registerCode) {
-		this.registerCode = registerCode;
-	}
-
-	public String getEditorId() {
-		return editorId;
-	}
-
-	public void setEditorId(String editorId) {
-		this.editorId = editorId;
-	}
-	
-	public List<PenalizeModel> getPenalizes() {
-		return penalizes;
-	}
-
-	public void setPenalizes(List<PenalizeModel> penalizes) {
-		this.penalizes = penalizes;
-	}
-
-	public List<BorrowingCardModel> getBorrowings() {
-		return borrowings;
-	}
-
-	public void setBorrowings(List<BorrowingCardModel> borrowings) {
-		this.borrowings = borrowings;
-	}
 
 	public void buildInfo(UserModel userForm) {
 		this.username = userForm.getUsername();

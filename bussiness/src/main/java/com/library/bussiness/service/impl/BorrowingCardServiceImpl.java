@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import com.library.bussiness.service.BookService;
 import com.library.bussiness.service.BorrowingCardService;
 import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
@@ -17,6 +18,9 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 	@Autowired
 	BorrowingCardRepository borrowingCardRepository;
 
+	@Autowired
+	BookService bookService;
+
 	@Override
 	public List<BorrowingCardModel> findAll() {
 		return borrowingCardRepository.findAll();
@@ -24,7 +28,16 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 
 	@Override
 	public BorrowingCardModel create(BorrowingCardModel object) {
-		return borrowingCardRepository.save(object);
+		try {
+			BorrowingCardModel borrowingCard = borrowingCardRepository.save(object);
+			if (borrowingCard != null) {
+				bookService.updateTotalBookAvailable(object.getBookId());
+				return borrowingCard;
+			}
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return null;
 	}
 
 	@Override
@@ -46,9 +59,10 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 	public Page<BorrowingCardModel> findBySearchCriteria(BorrowingCardCriteria criteria) {
 		return borrowingCardRepository.findAllByCriteria(criteria);
 	}
-	
+
 	@Override
 	public BorrowingCardModel findByUserId(String userId) {
 		return borrowingCardRepository.findByUserId(userId);
 	}
+
 }

@@ -9,7 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.library.dao.enums.StatusEnum;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document("category")
+@Getter
+@Setter
 public class CategoryModel extends AbstractModel implements Serializable {
 
 	/**
@@ -35,54 +40,6 @@ public class CategoryModel extends AbstractModel implements Serializable {
 	@Field("parent")
 	@DBRef
 	private CategoryModel parent;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public long getBookTotal() {
-		return bookTotal;
-	}
-
-	public void setBookTotal(long bookTotal) {
-		this.bookTotal = bookTotal;
-	}
-
-	public long getRank() {
-		return rank;
-	}
-
-	public void setRank(long rank) {
-		this.rank = rank;
-	}
-
-	public StatusEnum getStatus() {
-		return status;
-	}
-
-	public void setStatus(StatusEnum status) {
-		this.status = status;
-	}
-
-	public CategoryModel getParent() {
-		return parent;
-	}
-
-	public void setParent(CategoryModel parent) {
-		this.parent = parent;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public void buildInfo(CategoryModel categoryFrom) {
 		this.name = categoryFrom.getName();

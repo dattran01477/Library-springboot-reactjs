@@ -6,7 +6,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document("author")
+@Getter
+@Setter
 public class AuthorModel extends AbstractModel implements Serializable {
 	/**
 	 * 
@@ -18,24 +23,4 @@ public class AuthorModel extends AbstractModel implements Serializable {
 
 	@Field("name")
 	private String name;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void buildInfo(AuthorModel authorForm) {
-		this.name = authorForm.getName();
-	}
 }

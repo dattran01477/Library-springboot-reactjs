@@ -36,16 +36,16 @@ public abstract class AbstractCustomrepositoryImpl<T extends AbstractModel, C ex
 
 		// Init search page
 		Query queryStatement = new Query().with(pageable);
-		if (criteria.getQuery() != null && !StringUtils.isEmpty(criteria.getQuery().trim())) {
-			queryStatement.addCriteria(buildCriteriaBasic(criteria.getQuery()));
-		}
+
+		queryStatement.addCriteria(buildCriteriaBasic(criteria));
+
 		List<T> lsProduct = operation.find(queryStatement, typeParameterModelClass());
 
 		return PageableExecutionUtils.getPage(lsProduct, pageable,
 				() -> operation.count(queryStatement, typeParameterModelClass()));
 	}
 
-	public abstract Criteria buildCriteriaBasic(String query);
+	public abstract Criteria buildCriteriaBasic(AbstractCriteria query);
 
 	public abstract Class<T> typeParameterModelClass();
 

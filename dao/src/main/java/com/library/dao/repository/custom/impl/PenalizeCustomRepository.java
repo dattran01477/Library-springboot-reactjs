@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.AuthorModel;
 import com.library.dao.model.PenalizeModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.AuthorCriteria;
 import com.library.dao.model.criteria.PenalizeCriteria;
 import com.library.dao.repository.custom.AuthorCustomRepository;
@@ -14,10 +15,8 @@ public class PenalizeCustomRepository extends AbstractCustomrepositoryImpl<Penal
 		implements com.library.dao.repository.custom.PenalizeCustomRepository {
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-//		System.out.println("find all");
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("reason").regex(query, "i"),
-				Criteria.where("user_id").regex(query, "i"),Criteria.where("editor_id").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.AuthorModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.AuthorCriteria;
 import com.library.dao.repository.custom.AuthorCustomRepository;
 
@@ -12,9 +13,8 @@ public class AuthorCustomRepositoryImpl extends AbstractCustomrepositoryImpl<Aut
 		implements AuthorCustomRepository {
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-//		System.out.println("find all");
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("name").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

@@ -67,7 +67,7 @@ public class BookDetailController extends AbstractController {
 			@RequestBody BookDetailModel bookForm) {
 		try {
 			BookDetailModel book = bookDetailService.findById(id);
-			book.buildInfo(bookForm);
+//			book.buildInfo(bookForm);
 			bookDetailService.update(book);
 			return new ResponseEntity<BookDetailModel>(book, HttpStatus.OK);
 		} catch (Exception e) {

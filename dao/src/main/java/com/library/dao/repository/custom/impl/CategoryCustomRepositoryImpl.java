@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.CategoryModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.CategoryCriteria;
 import com.library.dao.repository.custom.CategoryCustomRepository;
 
@@ -12,9 +13,8 @@ public class CategoryCustomRepositoryImpl extends AbstractCustomrepositoryImpl<C
 		implements CategoryCustomRepository {
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("name").regex(query, "i"),
-				Criteria.where("type").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

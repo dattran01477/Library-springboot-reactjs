@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import com.library.dao.model.BookLocationModel;
+import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.model.criteria.BookLocationCriteria;
 import com.library.dao.repository.custom.BookLocationCustomRepository;
 
@@ -12,9 +13,8 @@ public class BookLocationRepositoryImpl extends AbstractCustomrepositoryImpl<Boo
 	implements BookLocationCustomRepository{
 
 	@Override
-	public Criteria buildCriteriaBasic(String query) {
-		Criteria criteria = Criteria.where("_id").exists(true).orOperator(Criteria.where("name").regex(query, "i"),
-				Criteria.where("description").regex(query, "i"), Criteria.where("parentLocationId").regex(query, "i"));
+	public Criteria buildCriteriaBasic(AbstractCriteria query) {
+		Criteria criteria = Criteria.where("_id").exists(true);
 		return criteria;
 	}
 

@@ -7,7 +7,12 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document
+@Getter
+@Setter
 public class AbstractModel {
 	@Field("create_date")
 	@CreatedDate
@@ -16,20 +21,4 @@ public class AbstractModel {
 	@Field("update_date")
 	@LastModifiedDate
 	private LocalDateTime updateDate;
-
-	public LocalDateTime getCreateDate() {
-		return createDate;
-	}
-
-	public void setCreateDate(LocalDateTime createDate) {
-		this.createDate = createDate;
-	}
-
-	public LocalDateTime getUpdateDate() {
-		return updateDate;
-	}
-
-	public void setUpdateDate(LocalDateTime updateDate) {
-		this.updateDate = updateDate;
-	}
 }

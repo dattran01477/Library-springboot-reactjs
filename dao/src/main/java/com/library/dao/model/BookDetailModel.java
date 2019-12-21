@@ -10,7 +10,12 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.library.dao.model.child.ReviewModel;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Document("detail_book")
+@Getter
+@Setter
 public class BookDetailModel extends AbstractModel implements Serializable {
 
 	/**
@@ -47,72 +52,4 @@ public class BookDetailModel extends AbstractModel implements Serializable {
 
 	@Field("reviews")
 	private List<ReviewModel> lsReviewModels;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public List<CategoryModel> getLsCategories() {
-		return lsCategories;
-	}
-
-	public void setLsCategories(List<CategoryModel> lsCategories) {
-		this.lsCategories = lsCategories;
-	}
-
-	public PublisherModel getPublisherModel() {
-		return publisherModel;
-	}
-
-	public void setPublisherModel(PublisherModel publisherModel) {
-		this.publisherModel = publisherModel;
-	}
-
-	public LanguageModel getLanguageModel() {
-		return languageModel;
-	}
-
-	public void setLanguageModel(LanguageModel languageModel) {
-		this.languageModel = languageModel;
-	}
-
-	public BookLocationModel getBookLocationModel() {
-		return bookLocationModel;
-	}
-
-	public void setBookLocationModel(BookLocationModel bookLocationModel) {
-		this.bookLocationModel = bookLocationModel;
-	}
-
-	public AuthorModel getAuthorModel() {
-		return authorModel;
-	}
-
-	public void setAuthorModel(AuthorModel authorModel) {
-		this.authorModel = authorModel;
-	}
-
-	public BookModel getBookModel() {
-		return bookModel;
-	}
-
-	public void setBookModel(BookModel bookModel) {
-		this.bookModel = bookModel;
-	}
-
-	public List<ReviewModel> getLsReviewModels() {
-		return lsReviewModels;
-	}
-
-	public void setLsReviewModels(List<ReviewModel> lsReviewModels) {
-		this.lsReviewModels = lsReviewModels;
-	}
-
-	public void buildInfo(BookDetailModel bookForm) {
-		// insert here to update model
-	}
 }
