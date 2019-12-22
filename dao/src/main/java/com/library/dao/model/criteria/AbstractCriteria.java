@@ -1,5 +1,7 @@
 package com.library.dao.model.criteria;
 
+import java.time.LocalDate;
+
 import org.springframework.data.domain.Sort.Direction;
 
 import com.library.dao.constant.AppConstant;
@@ -20,4 +22,9 @@ public abstract class AbstractCriteria {
 	private Direction sortDirection = Direction.DESC;
 
 	private String sortField;
+
+	private LocalDate fromDate;
+
+	private LocalDate toDate;
+
 }
