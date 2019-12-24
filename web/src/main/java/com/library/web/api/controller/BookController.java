@@ -1,5 +1,7 @@
 package com.library.web.api.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.BookServiceImpl;
 import com.library.dao.model.BookModel;
+import com.library.dao.model.child.ReviewModel;
 import com.library.dao.model.criteria.BookCriteria;
 
 @RestController
@@ -38,7 +41,31 @@ public class BookController extends AbstractController {
 		}
 		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
 	}
-	
+
+	@GetMapping("/{id}/reviews")
+	public ResponseEntity<List<ReviewModel>> findReviews(@PathVariable("id") String id) {
+		try {
+			List<ReviewModel> reviews = bookServiceImpl.findAllReviewBook(id);
+			return new ResponseEntity<List<ReviewModel>>(reviews, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<List<ReviewModel>>(HttpStatus.NOT_FOUND);
+	}
+
+	@PostMapping("/{id}/reviews")
+	public ResponseEntity<ReviewModel> saveReview(@PathVariable("id") String id,
+			@RequestBody ReviewModel reviewsModel) {
+		try {
+			reviewsModel.setBookId(id);
+			ReviewModel review = bookServiceImpl.saveReview(reviewsModel);
+			return new ResponseEntity<ReviewModel>(review, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<ReviewModel>(HttpStatus.NOT_FOUND);
+	}
+
 	@PostMapping
 	public ResponseEntity<BookModel> addNew(@RequestBody BookModel bookFrom) {
 		try {
@@ -48,7 +75,7 @@ public class BookController extends AbstractController {
 			LOGGER.error(e.getMessage(), e);
 		}
 		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
-	} 
+	}
 
 	@PutMapping("/{id}")
 	public ResponseEntity<BookModel> update(@PathVariable("id") String id, @RequestBody BookModel bookFrom) {
@@ -74,4 +101,5 @@ public class BookController extends AbstractController {
 		}
 		return new ResponseEntity(HttpStatus.NOT_FOUND);
 	}
+
 }

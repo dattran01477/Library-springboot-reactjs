@@ -45,7 +45,7 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 			object.setBorrowDate(borrowingDate);
 			BorrowingCardModel borrowingCard = borrowingCardRepository.save(object);
 			if (borrowingCard != null) {
-				bookService.updateTotalBookAvailable(object.getBookId());
+				bookService.updateTotalBookAvailable(object.getBookIds());
 				return borrowingCard;
 			}
 		} catch (Exception e) {
@@ -97,19 +97,21 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 
 			Long numberProcessBorrowing = 0l;
 
-			if (borrowingDate.getMinute() == ONHOUR) {
-				numberProcessBorrowing = borrowingCardRepository.countByBorrowDateBetween(
-						DateTimeUtils.createDate(borrowingDate.getHour(), ONHOUR, currentDT),
-						DateTimeUtils.createDate(borrowingDate.getHour(), BELLOWHOUR, currentDT));
-			} else {
-				numberProcessBorrowing = borrowingCardRepository.countByBorrowDateBetween(
-						DateTimeUtils.createDate(borrowingDate.getHour(), BELLOWHOUR, currentDT),
-						DateTimeUtils.createDate(borrowingDate.getHour() + 1, ONHOUR, currentDT));
-			}
+			do {
+				borrowingDate = borrowingDate.plusMinutes(BELLOWHOUR);
+				if (borrowingDate.getMinute() == ONHOUR) {
+					numberProcessBorrowing = borrowingCardRepository.countByBorrowDateBetween(
+							DateTimeUtils.createDate(borrowingDate.getHour(), ONHOUR, currentDT),
+							DateTimeUtils.createDate(borrowingDate.getHour(), BELLOWHOUR, currentDT));
+				} else {
+					numberProcessBorrowing = borrowingCardRepository.countByBorrowDateBetween(
+							DateTimeUtils.createDate(borrowingDate.getHour(), BELLOWHOUR, currentDT),
+							DateTimeUtils.createDate(borrowingDate.getHour() + 1, ONHOUR, currentDT));
+				}
+			} while (numberProcessBorrowing > MAXIMUM_PROCESS_BORROWNG);
+			
+			
 
-			if (numberProcessBorrowing < MAXIMUM_PROCESS_BORROWNG) {
-				return borrowingDate;
-			}
 		}
 
 		return borrowingDate;

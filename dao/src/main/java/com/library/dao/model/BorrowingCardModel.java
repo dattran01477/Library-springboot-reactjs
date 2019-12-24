@@ -25,7 +25,7 @@ public class BorrowingCardModel extends AbstractModel implements Serializable {
 	private String id;
 
 	@Field("book_ids")
-	private List<String> bookId;
+	private List<String> bookIds;
 
 	@Field("user_id")
 	private String userId;

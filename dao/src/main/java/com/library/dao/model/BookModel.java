@@ -72,10 +72,6 @@ public class BookModel extends AbstractModel implements Serializable {
 	@DBRef
 	private AuthorModel author;
 
-//	@Field("bookLocation")
-//	@DBRef
-//	private BookLocationModel bookLocation;
-
 	@Field("reviews")
 	private List<ReviewModel> lsReviewModels;
 

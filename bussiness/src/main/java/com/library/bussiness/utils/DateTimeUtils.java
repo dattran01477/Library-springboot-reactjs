@@ -39,5 +39,4 @@ public class DateTimeUtils {
 			return DateTimeUtils.createDate(localDT.getHour(), belowMinute, localDT);
 		}
 	}
-
 }

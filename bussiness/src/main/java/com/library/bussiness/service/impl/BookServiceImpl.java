@@ -10,8 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.library.bussiness.service.BookService;
 import com.library.dao.model.BookModel;
+import com.library.dao.model.child.ReviewModel;
 import com.library.dao.model.criteria.BookCriteria;
 import com.library.dao.repository.BookRepository;
+import com.library.dao.repository.ReviewRepository;
 
 @Service
 @Transactional
@@ -19,6 +21,9 @@ public class BookServiceImpl extends AbstractService implements BookService {
 
 	@Autowired
 	BookRepository bookRepository;
+
+	@Autowired
+	ReviewRepository reviewRepository;
 
 	@Override
 	public List<BookModel> findAll() {
@@ -89,5 +94,25 @@ public class BookServiceImpl extends AbstractService implements BookService {
 		}
 
 		return false;
+	}
+
+	@Override
+	public List<ReviewModel> findAllReviewBook(String bookId) {
+		try {
+			return reviewRepository.findByBookId(bookId);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage());
+		}
+		return new ArrayList<ReviewModel>();
+	}
+
+	@Override
+	public ReviewModel saveReview(ReviewModel reviewModel) {
+		try {
+			return reviewRepository.save(reviewModel);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage());
+		}
+		return new ReviewModel();
 	}
 }
