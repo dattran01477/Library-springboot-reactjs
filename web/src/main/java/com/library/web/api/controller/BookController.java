@@ -54,16 +54,19 @@ public class BookController extends AbstractController {
 	}
 
 	@PostMapping("/{id}/reviews")
-	public ResponseEntity<ReviewModel> saveReview(@PathVariable("id") String id,
+	public ResponseEntity<List<ReviewModel>> saveReview(@PathVariable("id") String id,
 			@RequestBody ReviewModel reviewsModel) {
 		try {
 			reviewsModel.setBookId(id);
 			ReviewModel review = bookServiceImpl.saveReview(reviewsModel);
-			return new ResponseEntity<ReviewModel>(review, HttpStatus.OK);
+			if (review != null) {
+				List<ReviewModel> lsReview = bookServiceImpl.findAllReviewBook(id);
+				return new ResponseEntity<List<ReviewModel>>(lsReview, HttpStatus.OK);
+			}
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
-		return new ResponseEntity<ReviewModel>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<List<ReviewModel>>(HttpStatus.NOT_FOUND);
 	}
 
 	@PostMapping

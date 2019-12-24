@@ -1,5 +1,7 @@
 package com.library.web.api.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -18,6 +20,7 @@ import com.library.bussiness.service.impl.UserServiceImpl;
 import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.UserModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
+import com.library.dao.model.dto.TabBorrowingTypeOfUserDTO;
 import com.library.web.utils.SecurityContextUtils;
 
 @RestController
@@ -36,6 +39,52 @@ public class BorrowingController extends AbstractController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<BorrowingCardModel> findById(@PathVariable("id") String id) {
+		try {
+			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
+			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
+	}
+
+	@GetMapping("/tabs")
+	public ResponseEntity<TabBorrowingTypeOfUserDTO> tabs() {
+		try {
+			List<BorrowingCardModel> lsBorrowing = borrwingCardServiceImpl.findAll();
+			TabBorrowingTypeOfUserDTO tabBorrowing = new TabBorrowingTypeOfUserDTO();
+			tabBorrowing.setBorrowingCards(lsBorrowing);
+			return new ResponseEntity<TabBorrowingTypeOfUserDTO>(tabBorrowing, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<TabBorrowingTypeOfUserDTO>(HttpStatus.NOT_FOUND);
+	}
+
+	@GetMapping("/{userId}/new")
+	public ResponseEntity<BorrowingCardModel> getNewBorrowByUser(@PathVariable("userId") String id) {
+		try {
+			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
+			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
+	}
+
+	@GetMapping("/{userId}/near-expired")
+	public ResponseEntity<BorrowingCardModel> getNearlyExpireBorrowByUser(@PathVariable("userId") String id) {
+		try {
+			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
+			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
+	}
+
+	@GetMapping("/{userId}/expired")
+	public ResponseEntity<BorrowingCardModel> getExpiredBorrowByUser(@PathVariable("userId") String id) {
 		try {
 			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
 			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);

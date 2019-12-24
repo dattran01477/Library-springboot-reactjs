@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.library.bussiness.service.BookService;
 import com.library.bussiness.service.BorrowingCardService;
 import com.library.bussiness.utils.DateTimeUtils;
+import com.library.dao.enums.BorrowingStatus;
 import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
 import com.library.dao.repository.BorrowingCardRepository;
@@ -26,6 +27,7 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 	public static final int MAXIMUM_PROCESS_BORROWNG = 30;
 	public static final int ONHOUR = 0;
 	public static final int BELLOWHOUR = 30;
+	public static final long EXPIRED_SECOND = 86400l;
 
 	@Autowired
 	BorrowingCardRepository borrowingCardRepository;
@@ -42,11 +44,16 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 	public BorrowingCardModel create(BorrowingCardModel object) {
 		try {
 			LocalDateTime borrowingDate = getBorrowingDateTime();
+			LocalDateTime expiredDate = borrowingDate.plusSeconds(EXPIRED_SECOND);
+			
+			object.setStatus(BorrowingStatus.active.toString());
 			object.setBorrowDate(borrowingDate);
+			object.setExpiredDate(expiredDate);
+			
 			BorrowingCardModel borrowingCard = borrowingCardRepository.save(object);
 			if (borrowingCard != null) {
 				bookService.updateTotalBookAvailable(object.getBookIds());
-				return borrowingCard;
+				return borrowingCard; 
 			}
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
@@ -109,8 +116,6 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 							DateTimeUtils.createDate(borrowingDate.getHour() + 1, ONHOUR, currentDT));
 				}
 			} while (numberProcessBorrowing > MAXIMUM_PROCESS_BORROWNG);
-			
-			
 
 		}
 

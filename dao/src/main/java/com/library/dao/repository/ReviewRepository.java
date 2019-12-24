@@ -7,5 +7,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.library.dao.model.child.ReviewModel;
 
 public interface ReviewRepository extends MongoRepository<ReviewModel, String> {
-	List<ReviewModel> findByBookId(String bookId);
+	List<ReviewModel> findByBookIdOrderByCreateDateDesc(String bookId);
 }

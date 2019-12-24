@@ -6,13 +6,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.library.dao.model.AbstractModel;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Document("review")
 @Getter
 @Setter
-public class ReviewModel implements Serializable {
+public class ReviewModel extends AbstractModel implements Serializable {
 
 	/**
 	 * 
@@ -27,4 +29,7 @@ public class ReviewModel implements Serializable {
 
 	@Field("bookId")
 	private String bookId;
+
+	@Field("username")
+	private String username;
 }

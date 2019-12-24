@@ -42,4 +42,7 @@ public class BorrowingCardModel extends AbstractModel implements Serializable {
 	@Field("editor_id")
 	private String editorId;
 
+	@Field("expired_date")
+	private LocalDateTime expiredDate;
+
 }

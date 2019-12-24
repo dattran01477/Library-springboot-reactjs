@@ -99,7 +99,7 @@ public class BookServiceImpl extends AbstractService implements BookService {
 	@Override
 	public List<ReviewModel> findAllReviewBook(String bookId) {
 		try {
-			return reviewRepository.findByBookId(bookId);
+			return reviewRepository.findByBookIdOrderByCreateDateDesc(bookId);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
