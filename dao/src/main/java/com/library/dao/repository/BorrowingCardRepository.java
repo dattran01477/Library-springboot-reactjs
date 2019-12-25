@@ -1,6 +1,7 @@
 package com.library.dao.repository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
@@ -9,6 +10,6 @@ import com.library.dao.repository.custom.BorrowingCardCustomRepository;
 
 public interface BorrowingCardRepository
 		extends MongoRepository<BorrowingCardModel, String>, BorrowingCardCustomRepository {
-	BorrowingCardModel findByUserId(String userID);
+	List<BorrowingCardModel> findByUserId(String userID);
 	Long countByBorrowDateBetween(LocalDateTime from, LocalDateTime to);
 }

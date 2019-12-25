@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.BorrowingCardServiceImpl;
 import com.library.bussiness.service.impl.UserServiceImpl;
+import com.library.dao.enums.BorrowingStatus;
 import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.UserModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
@@ -48,21 +49,27 @@ public class BorrowingController extends AbstractController {
 		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
 	}
 
-	@GetMapping("/tabs")
+	@GetMapping("/user/tabs")
 	public ResponseEntity<TabBorrowingTypeOfUserDTO> tabs() {
 		try {
-			List<BorrowingCardModel> lsBorrowing = borrwingCardServiceImpl.findAll();
-			TabBorrowingTypeOfUserDTO tabBorrowing = new TabBorrowingTypeOfUserDTO();
-			tabBorrowing.setBorrowingCards(lsBorrowing);
-			return new ResponseEntity<TabBorrowingTypeOfUserDTO>(tabBorrowing, HttpStatus.OK);
+			String username = SecurityContextUtils.getUserName();
+			UserModel user = userServiceImpl.findByUsername(username);
+			if (user != null) {
+				List<BorrowingCardModel> lsBorrowing = borrwingCardServiceImpl
+						.findByUserId(user.getId());
+				TabBorrowingTypeOfUserDTO tabBorrowing = new TabBorrowingTypeOfUserDTO();
+				tabBorrowing.setBorrowingCards(lsBorrowing);
+				return new ResponseEntity<TabBorrowingTypeOfUserDTO>(tabBorrowing, HttpStatus.OK);
+			}
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
-		return new ResponseEntity<TabBorrowingTypeOfUserDTO>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<TabBorrowingTypeOfUserDTO>(HttpStatus.FORBIDDEN);
 	}
 
 	@GetMapping("/{userId}/new")
-	public ResponseEntity<BorrowingCardModel> getNewBorrowByUser(@PathVariable("userId") String id) {
+	public ResponseEntity<BorrowingCardModel> getNewBorrowByUser(
+			@PathVariable("userId") String id) {
 		try {
 			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
 			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
@@ -73,7 +80,8 @@ public class BorrowingController extends AbstractController {
 	}
 
 	@GetMapping("/{userId}/near-expired")
-	public ResponseEntity<BorrowingCardModel> getNearlyExpireBorrowByUser(@PathVariable("userId") String id) {
+	public ResponseEntity<BorrowingCardModel> getNearlyExpireBorrowByUser(
+			@PathVariable("userId") String id) {
 		try {
 			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
 			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
@@ -84,7 +92,8 @@ public class BorrowingController extends AbstractController {
 	}
 
 	@GetMapping("/{userId}/expired")
-	public ResponseEntity<BorrowingCardModel> getExpiredBorrowByUser(@PathVariable("userId") String id) {
+	public ResponseEntity<BorrowingCardModel> getExpiredBorrowByUser(
+			@PathVariable("userId") String id) {
 		try {
 			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
 			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
@@ -95,17 +104,21 @@ public class BorrowingController extends AbstractController {
 	}
 
 	@PostMapping
-	public ResponseEntity<BorrowingCardModel> addNew(@RequestBody BorrowingCardModel borrowingCardForm) {
+	public ResponseEntity<BorrowingCardModel> addNew(
+			@RequestBody BorrowingCardModel borrowingCardForm) {
 		try {
-			UserModel userModel = userServiceImpl.findByUsername(SecurityContextUtils.getUserName());
+			UserModel userModel = userServiceImpl
+					.findByUsername(SecurityContextUtils.getUserName());
 			if (userModel != null) {
 				borrowingCardForm.setUserId(userModel.getId());
-				BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.create(borrowingCardForm);
+				BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl
+						.create(borrowingCardForm);
 
 				if (borrowingCardModel != null) {
 					userModel.getBorrowings().add(borrowingCardModel);
 					userServiceImpl.update(userModel);
-					return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+					return new ResponseEntity<BorrowingCardModel>(borrowingCardModel,
+							HttpStatus.OK);
 				}
 			} else {
 				throw new NullPointerException("Not found user");
@@ -120,7 +133,8 @@ public class BorrowingController extends AbstractController {
 	public ResponseEntity<BorrowingCardModel> update(@PathVariable("id") String id,
 			@RequestBody BorrowingCardModel borrowingCardForm) {
 		try {
-			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.update(borrowingCardForm);
+			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl
+					.update(borrowingCardForm);
 			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
@@ -140,11 +154,15 @@ public class BorrowingController extends AbstractController {
 		return new ResponseEntity(HttpStatus.NOT_FOUND);
 	}
 
-	@GetMapping("submitted/{id}")
-	public ResponseEntity<BorrowingCardModel> findByUserId(@PathVariable("id") String id) {
+	@PostMapping("/{id}/register-return")
+	public ResponseEntity<BorrowingCardModel> registerReturnBook(@PathVariable("id") String id) {
 		try {
-			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findByUserId(id);
-			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+			BorrowingCardModel borrowCard = borrwingCardServiceImpl.findById(id.trim());
+			if (borrowCard != null) {
+				borrowCard.setStatus(BorrowingStatus.waitting_return.toString());
+				borrowCard = borrwingCardServiceImpl.update(borrowCard);
+				return new ResponseEntity<BorrowingCardModel>(borrowCard, HttpStatus.OK);
+			}
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}

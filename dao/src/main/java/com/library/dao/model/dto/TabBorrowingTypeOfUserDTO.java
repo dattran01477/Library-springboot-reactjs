@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.library.dao.enums.BorrowingStatus;
 import com.library.dao.model.BorrowingCardModel;
 
 import lombok.Getter;
@@ -17,15 +18,19 @@ public class TabBorrowingTypeOfUserDTO {
 
 	@Getter
 	@Setter
-	private List<BorrowingCardModel> newBorrowingCards;
+	private List<BorrowingCardModel> newBorrowingCards = new ArrayList<BorrowingCardModel>();
 
 	@Getter
 	@Setter
-	private List<BorrowingCardModel> nearlyExpiredBorrowingCards;
+	private List<BorrowingCardModel> nearlyExpiredBorrowingCards = new ArrayList<BorrowingCardModel>();
 
 	@Getter
 	@Setter
-	private List<BorrowingCardModel> expiredBorrowingCards;
+	private List<BorrowingCardModel> expiredBorrowingCards = new ArrayList<BorrowingCardModel>();
+
+	@Getter
+	@Setter
+	private List<BorrowingCardModel> borrowedCards = new ArrayList<BorrowingCardModel>();
 
 	private List<BorrowingCardModel> borrowingCards;
 
@@ -35,42 +40,21 @@ public class TabBorrowingTypeOfUserDTO {
 
 	public void setBorrowingCards(List<BorrowingCardModel> borrowingCards) {
 		this.borrowingCards = borrowingCards;
-		this.newBorrowingCards = getNew(this.borrowingCards);
-		this.nearlyExpiredBorrowingCards = getNearLyExpired(this.borrowingCards);
-		this.expiredBorrowingCards = getExpired(this.borrowingCards);
-	}
-
-	private List<BorrowingCardModel> getNew(List<BorrowingCardModel> lsBorrow) {
-		List<BorrowingCardModel> lsBorrowings = new ArrayList<BorrowingCardModel>();
-		for (BorrowingCardModel item : lsBorrow) {
-			Duration duration = Duration.between(item.getCreateDate(), LocalDateTime.now());
-			if (duration.getSeconds() < NEW_SECOND_CHECK) {
-				lsBorrowings.add(item);
+		for (BorrowingCardModel item : this.borrowingCards) {
+			Duration durationNew = Duration.between(item.getCreateDate(), LocalDateTime.now());
+			Duration durationExpired = Duration.between(LocalDateTime.now(), item.getExpiredDate());
+			if (item.getStatus().equals(BorrowingStatus.returned.toString())) {
+				this.borrowedCards.add(item);
+			} else {
+				if (durationNew.getSeconds() < NEW_SECOND_CHECK) {
+					this.newBorrowingCards.add(item);
+				} else if (durationExpired.getSeconds() < EXPIRED_SECOND_CHECK) {
+					this.nearlyExpiredBorrowingCards.add(item);
+				} else if (LocalDateTime.now().isAfter(item.getExpiredDate())) {
+					this.expiredBorrowingCards.add(item);
+				}
 			}
+
 		}
-		return lsBorrowings;
 	}
-
-	private List<BorrowingCardModel> getExpired(List<BorrowingCardModel> lsBorrow) {
-
-		List<BorrowingCardModel> lsBorrowings = new ArrayList<BorrowingCardModel>();
-		for (BorrowingCardModel item : lsBorrow) {
-			if (LocalDateTime.now().isAfter(item.getExpiredDate())) {
-				lsBorrowings.add(item);
-			}
-		}
-		return lsBorrowings;
-	}
-
-	private List<BorrowingCardModel> getNearLyExpired(List<BorrowingCardModel> lsBorrow) {
-		List<BorrowingCardModel> lsBorrowings = new ArrayList<BorrowingCardModel>();
-		for (BorrowingCardModel item : lsBorrow) {
-			Duration duration = Duration.between(LocalDateTime.now(), item.getExpiredDate());
-			if (duration.getSeconds() < EXPIRED_SECOND_CHECK) {
-				lsBorrowings.add(item);
-			}
-		}
-		return lsBorrowings;
-	}
-
 }

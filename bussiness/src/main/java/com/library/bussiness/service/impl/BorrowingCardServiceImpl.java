@@ -82,7 +82,7 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 	}
 
 	@Override
-	public BorrowingCardModel findByUserId(String userId) {
+	public List<BorrowingCardModel> findByUserId(String userId) {
 		return borrowingCardRepository.findByUserId(userId);
 	}
 
