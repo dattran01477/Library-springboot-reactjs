@@ -15,16 +15,17 @@ import com.library.dao.model.UserModel;
 @RestController
 @RequestMapping("/auth")
 public class AuthenticationController {
-	
+
 	@Autowired
 	UserServiceImpl userService;
-	
+
 	@GetMapping
 	public UserModel getUserDetail() {
-		KeycloakPrincipal principal = (KeycloakPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		KeycloakPrincipal principal = (KeycloakPrincipal) SecurityContextHolder.getContext().getAuthentication()
+				.getPrincipal();
 		KeycloakSecurityContext session = principal.getKeycloakSecurityContext();
 		AccessToken accessToken = session.getToken();
-		
-		return userService.findByUsername(accessToken.getEmail());
+		UserModel userModel = userService.findByUsername(accessToken.getEmail());
+		return userModel;
 	}
 }

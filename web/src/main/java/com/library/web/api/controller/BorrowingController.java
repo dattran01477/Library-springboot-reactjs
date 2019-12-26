@@ -67,42 +67,6 @@ public class BorrowingController extends AbstractController {
 		return new ResponseEntity<TabBorrowingTypeOfUserDTO>(HttpStatus.FORBIDDEN);
 	}
 
-	@GetMapping("/{userId}/new")
-	public ResponseEntity<BorrowingCardModel> getNewBorrowByUser(
-			@PathVariable("userId") String id) {
-		try {
-			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
-			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-		}
-		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
-	}
-
-	@GetMapping("/{userId}/near-expired")
-	public ResponseEntity<BorrowingCardModel> getNearlyExpireBorrowByUser(
-			@PathVariable("userId") String id) {
-		try {
-			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
-			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-		}
-		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
-	}
-
-	@GetMapping("/{userId}/expired")
-	public ResponseEntity<BorrowingCardModel> getExpiredBorrowByUser(
-			@PathVariable("userId") String id) {
-		try {
-			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.findById(id);
-			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-		}
-		return new ResponseEntity<BorrowingCardModel>(HttpStatus.NOT_FOUND);
-	}
-
 	@PostMapping
 	public ResponseEntity<BorrowingCardModel> addNew(
 			@RequestBody BorrowingCardModel borrowingCardForm) {
