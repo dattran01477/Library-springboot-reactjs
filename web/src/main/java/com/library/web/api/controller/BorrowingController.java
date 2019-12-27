@@ -22,6 +22,7 @@ import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.UserModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
 import com.library.dao.model.dto.TabBorrowingTypeOfUserDTO;
+import com.library.mail.service.MailService;
 import com.library.web.utils.SecurityContextUtils;
 
 @RestController
@@ -32,6 +33,9 @@ public class BorrowingController extends AbstractController {
 
 	@Autowired
 	UserServiceImpl userServiceImpl;
+
+	@Autowired
+	MailService mailService;
 
 	@GetMapping
 	public Page<BorrowingCardModel> findCategoryByCriteria(BorrowingCardCriteria criteria) {
@@ -55,8 +59,7 @@ public class BorrowingController extends AbstractController {
 			String username = SecurityContextUtils.getUserName();
 			UserModel user = userServiceImpl.findByUsername(username);
 			if (user != null) {
-				List<BorrowingCardModel> lsBorrowing = borrwingCardServiceImpl
-						.findByUserId(user.getId());
+				List<BorrowingCardModel> lsBorrowing = borrwingCardServiceImpl.findByUserId(user.getId());
 				TabBorrowingTypeOfUserDTO tabBorrowing = new TabBorrowingTypeOfUserDTO();
 				tabBorrowing.setBorrowingCards(lsBorrowing);
 				return new ResponseEntity<TabBorrowingTypeOfUserDTO>(tabBorrowing, HttpStatus.OK);
@@ -68,22 +71,19 @@ public class BorrowingController extends AbstractController {
 	}
 
 	@PostMapping
-	public ResponseEntity<BorrowingCardModel> addNew(
-			@RequestBody BorrowingCardModel borrowingCardForm) {
+	public ResponseEntity<BorrowingCardModel> addNew(@RequestBody BorrowingCardModel borrowingCardForm) {
 		try {
-			UserModel userModel = userServiceImpl
-					.findByUsername(SecurityContextUtils.getUserName());
+			UserModel userModel = userServiceImpl.findByUsername(SecurityContextUtils.getUserName());
 			if (userModel != null) {
 				borrowingCardForm.setUserId(userModel.getId());
-				BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl
-						.create(borrowingCardForm);
+				BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.create(borrowingCardForm);
 
 				if (borrowingCardModel != null) {
 					userModel.getBorrowings().add(borrowingCardModel);
 					userServiceImpl.update(userModel);
-					return new ResponseEntity<BorrowingCardModel>(borrowingCardModel,
-							HttpStatus.OK);
-				}
+					mailService.sendMail(userModel.getEmail(), borrowingCardModel);
+					return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
+				} 
 			} else {
 				throw new NullPointerException("Not found user");
 			}
@@ -97,8 +97,7 @@ public class BorrowingController extends AbstractController {
 	public ResponseEntity<BorrowingCardModel> update(@PathVariable("id") String id,
 			@RequestBody BorrowingCardModel borrowingCardForm) {
 		try {
-			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl
-					.update(borrowingCardForm);
+			BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.update(borrowingCardForm);
 			return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);

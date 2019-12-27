@@ -45,15 +45,14 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 		try {
 			LocalDateTime borrowingDate = getBorrowingDateTime();
 			LocalDateTime expiredDate = borrowingDate.plusSeconds(EXPIRED_SECOND);
-			
+
 			object.setStatus(BorrowingStatus.active.toString());
 			object.setBorrowDate(borrowingDate);
 			object.setExpiredDate(expiredDate);
-			
 			BorrowingCardModel borrowingCard = borrowingCardRepository.save(object);
 			if (borrowingCard != null) {
 				bookService.updateTotalBookAvailable(object.getBookIds());
-				return borrowingCard; 
+				return borrowingCard;
 			}
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
