@@ -13,9 +13,11 @@ import com.library.bussiness.service.BookService;
 import com.library.bussiness.service.BorrowingCardService;
 import com.library.bussiness.utils.DateTimeUtils;
 import com.library.dao.enums.BorrowingStatus;
+import com.library.dao.model.BookModel;
 import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
 import com.library.dao.repository.BorrowingCardRepository;
+import com.library.mail.service.MailService;
 
 @Service
 public class BorrowingCardServiceImpl extends AbstractService implements BorrowingCardService {
@@ -34,6 +36,12 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 
 	@Autowired
 	BookService bookService;
+
+	@Autowired
+	NotifyServiceImpl NotifyServiceImpl;
+
+	@Autowired
+	MailService mailService;
 
 	@Override
 	public List<BorrowingCardModel> findAll() {
@@ -62,6 +70,19 @@ public class BorrowingCardServiceImpl extends AbstractService implements Borrowi
 
 	@Override
 	public BorrowingCardModel update(BorrowingCardModel object) {
+		try {
+			BorrowingCardModel borrowingCardModel = borrowingCardRepository.findById(object.getId()).get();
+			if ((borrowingCardModel.getStatus().equals(BorrowingStatus.waitting_return.toString())
+					|| borrowingCardModel.getStatus().equals(BorrowingStatus.active.toString()))
+					&& object.getStatus().equals(BorrowingStatus.returned.toString())) {
+				for (BookModel book : borrowingCardModel.getBookIds()) {
+					book.setAmountBook(book.getAmountBook() + 1);
+					bookService.update(book);
+				}
+			}
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
 		return borrowingCardRepository.save(object);
 	}
 

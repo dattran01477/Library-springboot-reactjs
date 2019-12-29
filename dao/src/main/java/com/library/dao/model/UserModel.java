@@ -19,7 +19,7 @@ import lombok.Setter;
 @Document("user")
 @Getter
 @Setter
-public class UserModel extends AbstractModel implements Serializable {
+public class UserModel extends BasicModel implements Serializable {
 	/**
 	 * 
 	 */
@@ -36,6 +36,9 @@ public class UserModel extends AbstractModel implements Serializable {
 
 	@Field(value = "firstName")
 	private String firstName;
+
+	@Field(value = "address")
+	private String address;
 
 	@Field(value = "fbAccount")
 	private String fbAccount;
@@ -84,15 +87,10 @@ public class UserModel extends AbstractModel implements Serializable {
 	private List<BorrowingCardModel> borrowings = new ArrayList<BorrowingCardModel>();// phiếu mượn
 
 	public void buildInfo(UserModel userForm) {
-		this.username = userForm.getUsername();
-		this.password = userForm.getPassword();
 		this.name = userForm.getName();
 		this.phoneNumber = userForm.getPhoneNumber();
-		this.email = userForm.getEmail();
 		this.registerCode = userForm.getRegisterCode();
-		this.editorId = userForm.getEditorId();
 		this.gender = userForm.getGender();
-		this.role = userForm.getRole();
 		this.status = userForm.getStatus();
 	}
 }

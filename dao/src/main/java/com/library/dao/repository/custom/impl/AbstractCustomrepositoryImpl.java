@@ -13,12 +13,12 @@ import org.springframework.data.repository.support.PageableExecutionUtils;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
-import com.library.dao.model.AbstractModel;
+import com.library.dao.model.BasicModel;
 import com.library.dao.model.criteria.AbstractCriteria;
 import com.library.dao.repository.custom.GenericCustomRepository;
 
 @Repository
-public abstract class AbstractCustomrepositoryImpl<T extends AbstractModel, C extends AbstractCriteria>
+public abstract class AbstractCustomrepositoryImpl<T extends BasicModel, C extends AbstractCriteria>
 		implements GenericCustomRepository<T, C> {
 	@Autowired
 	private MongoOperations operation;

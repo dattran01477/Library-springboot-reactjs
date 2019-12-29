@@ -11,5 +11,8 @@ import com.library.dao.repository.custom.BorrowingCardCustomRepository;
 public interface BorrowingCardRepository
 		extends MongoRepository<BorrowingCardModel, String>, BorrowingCardCustomRepository {
 	List<BorrowingCardModel> findByUserId(String userID);
+
 	Long countByBorrowDateBetween(LocalDateTime from, LocalDateTime to);
+
+	List<BorrowingCardModel> findByExpiredDateAfter(LocalDateTime date);
 }

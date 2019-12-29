@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<h1 style="color: red; font-weight: bold">Thông Báo Trả Sách</h1>
+	<p style="font-weight: bold"
+		th:text="'Thẻ mượn sách có mã số:' + ${borrowingId}+' sắp tới thời hạn trả. Vui lòng mang tới địa điểm trả để trả'"></p>
+	<p style="font-weight: bold"
+		th:text="'Địa Điểm Trả Sách:Thư Viện Trường Đại Học Sư Phạm Kỹ Thuật Tp HCM'"></p>
+	<p>* Vui lòng đến đúng thời gian và địa điểm để nhận sách</p>
+	<p>Thanks!</p>
+</body>
+</html>

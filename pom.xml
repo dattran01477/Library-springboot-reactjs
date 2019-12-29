@@ -19,5 +19,6 @@
 		<module>web</module>
 		<module>bussiness</module>
 		<module>mail</module>
+		<module>schedule</module>
 	</modules>
 </project>

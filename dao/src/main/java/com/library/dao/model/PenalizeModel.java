@@ -13,7 +13,7 @@ import lombok.Setter;
 @Document
 @Getter
 @Setter
-public class PenalizeModel extends AbstractModel implements Serializable {
+public class PenalizeModel extends BasicModel implements Serializable {
 
 	/**
 	 * 

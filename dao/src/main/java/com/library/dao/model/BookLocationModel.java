@@ -12,7 +12,7 @@ import lombok.Setter;
 @Document("book_location")
 @Getter
 @Setter
-public class BookLocationModel extends AbstractModel implements Serializable {
+public class BookLocationModel extends BasicModel implements Serializable {
 
 	/**
 	 * 

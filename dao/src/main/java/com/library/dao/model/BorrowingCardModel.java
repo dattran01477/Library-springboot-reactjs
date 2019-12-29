@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -14,7 +15,7 @@ import lombok.Setter;
 @Document("borrowing-card-detail")
 @Getter
 @Setter
-public class BorrowingCardModel extends AbstractModel implements Serializable {
+public class BorrowingCardModel extends BasicModel implements Serializable {
 
 	/**
 	 * 
@@ -25,7 +26,8 @@ public class BorrowingCardModel extends AbstractModel implements Serializable {
 	private String id;
 
 	@Field("book_ids")
-	private List<String> bookIds;
+	@DBRef
+	private List<BookModel> bookIds;
 
 	@Field("user_id")
 	private String userId;

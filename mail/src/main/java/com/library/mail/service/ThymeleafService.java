@@ -18,7 +18,7 @@ public class ThymeleafService {
 	private static final String MAIL_TEMPLATE_SUFFIX = ".html";
 	private static final String UTF_8 = "UTF-8";
 
-	private static final String TEMPLATE_NAME = "mail-template";
+	private static final String TEMPLATE_NAME = "mail-expired-notify";
 
 	private static TemplateEngine templateEngine;
 
@@ -56,6 +56,14 @@ public class ThymeleafService {
 				borrowingModel.getBorrowDate().getDayOfMonth() + "/" + borrowingModel.getBorrowDate().getMonthValue()
 						+ "/" + borrowingModel.getBorrowDate().getYear() + "-"
 						+ borrowingModel.getBorrowDate().getHour() + ":" + borrowingModel.getBorrowDate().getMinute());
+		context.setVariable("borrowingId", borrowingModel.getBookIds());
+
+		return templateEngine.process(TEMPLATE_NAME, context);
+	}
+
+	public String getContentExpiredNotify(BorrowingCardModel borrowingModel) {
+		final Context context = new Context();
+
 		context.setVariable("borrowingId", borrowingModel.getBookIds());
 
 		return templateEngine.process(TEMPLATE_NAME, context);

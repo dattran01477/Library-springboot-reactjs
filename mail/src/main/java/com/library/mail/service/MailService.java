@@ -19,11 +19,14 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.library.dao.model.BorrowingCardModel;
+import com.library.dao.repository.UserRepository;
 
 @Service
 public class MailService {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MailService.class);
 	private static final String CONTENT_TYPE_TEXT_HTML = "text/html;charset=\"utf-8\"";
+	private static final String BORROWING_SUBJECT = "Muon Sach Thanh Cong";
+	private static final String EXPIRED_SUBJECT = "Thong Bao Han Tra Sach";
 
 	@Value("${config.mail.host}")
 	private String host;
@@ -38,7 +41,44 @@ public class MailService {
 	ThymeleafService thymeleafService;
 
 	@Async
-	public void sendMail(String receiveEmail, BorrowingCardModel borrowingModel) {
+	public void sendMailNotifySuccess(String receiveEmail, BorrowingCardModel borrowingModel) {
+
+		Message message = new MimeMessage(getSession());
+		try {
+			LOGGER.info("-----------------Start send notify:" + receiveEmail + "------------------");
+			message.setRecipients(Message.RecipientType.TO,
+					new InternetAddress[] { new InternetAddress(receiveEmail) });
+
+			message.setFrom(new InternetAddress(email));
+			message.setSubject(BORROWING_SUBJECT);
+			message.setContent(thymeleafService.getContent(borrowingModel), CONTENT_TYPE_TEXT_HTML);
+			Transport.send(message);
+			LOGGER.info("-----------------End Sent Mail:" + receiveEmail + "------------------");
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Async
+	public void sendMailNotifyExpired(String receiveEmail, BorrowingCardModel borrowingModel) {
+
+		Message message = new MimeMessage(getSession());
+		try {
+			LOGGER.info("-----------------Start send notify:" + receiveEmail + "------------------");
+			message.setRecipients(Message.RecipientType.TO,
+					new InternetAddress[] { new InternetAddress(receiveEmail) });
+
+			message.setFrom(new InternetAddress(email));
+			message.setSubject(EXPIRED_SUBJECT);
+			message.setContent(thymeleafService.getContentExpiredNotify(borrowingModel), CONTENT_TYPE_TEXT_HTML);
+			Transport.send(message);
+			LOGGER.info("-----------------End Sent Mail:" + receiveEmail + "------------------");
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private Session getSession() {
 		Properties props = new Properties();
 		props.put("mail.smtp.host", host);
 		props.put("mail.smtp.starttls.enable", "true");
@@ -51,20 +91,8 @@ public class MailService {
 				return new PasswordAuthentication(email, password);
 			}
 		});
-		Message message = new MimeMessage(session);
-		try {
-			LOGGER.info("-----------------Start send:" + receiveEmail + "------------------");
-			message.setRecipients(Message.RecipientType.TO,
-					new InternetAddress[] { new InternetAddress(receiveEmail) });
 
-			message.setFrom(new InternetAddress(email));
-			message.setSubject("Spring-email-with-thymeleaf subject");
-			message.setContent(thymeleafService.getContent(borrowingModel), CONTENT_TYPE_TEXT_HTML);
-			Transport.send(message);
-			LOGGER.info("-----------------Sent Mail:" + receiveEmail + "------------------");
-		} catch (MessagingException e) {
-			e.printStackTrace();
-		}
+		return session;
 	}
 
 }

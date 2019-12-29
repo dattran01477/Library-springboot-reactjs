@@ -7,7 +7,7 @@ import com.library.dao.model.child.ReviewModel;
 import com.library.dao.model.criteria.BookCriteria;
 
 public interface BookService extends GenericService<BookModel, String, BookCriteria> {
-	public boolean updateTotalBookAvailable(List<String> bookIds);
+	public boolean updateTotalBookAvailable(List<BookModel> bookIds);
 
 	public List<ReviewModel> findAllReviewBook(String bookId);
 

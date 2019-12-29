@@ -13,7 +13,7 @@ import lombok.Setter;
 @Document
 @Getter
 @Setter
-public class AbstractModel {
+public class BasicModel {
 	@Field("create_date")
 	@CreatedDate
 	private LocalDateTime createDate;

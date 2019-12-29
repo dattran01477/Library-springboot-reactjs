@@ -12,7 +12,7 @@ import lombok.Setter;
 @Document("language")
 @Getter
 @Setter
-public class LanguageModel extends AbstractModel implements Serializable {
+public class LanguageModel extends BasicModel implements Serializable {
 
 	/**
 	 * 

@@ -1,7 +1,5 @@
 package com.library.dao.model;
 
-import java.io.Serializable;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -9,18 +7,20 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import lombok.Getter;
 import lombok.Setter;
 
-@Document("author")
+@Document
 @Getter
 @Setter
-public class AuthorModel extends BasicModel implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class NotifyModel extends BasicModel {
 
 	@Id
 	private String id;
-
-	@Field("name")
-	private String name;
+	
+	@Field("user_id")
+	private String userId;
+	
+	@Field("is_Viewed")
+	private Boolean isViewed;
+	
+	@Field("message")
+	private String message;
 }

@@ -81,9 +81,9 @@ public class BorrowingController extends AbstractController {
 				if (borrowingCardModel != null) {
 					userModel.getBorrowings().add(borrowingCardModel);
 					userServiceImpl.update(userModel);
-					mailService.sendMail(userModel.getEmail(), borrowingCardModel);
+					mailService.sendMailNotifySuccess(userModel.getEmail(), borrowingCardModel);
 					return new ResponseEntity<BorrowingCardModel>(borrowingCardModel, HttpStatus.OK);
-				} 
+				}
 			} else {
 				throw new NullPointerException("Not found user");
 			}

@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import com.library.dao.model.AbstractModel;
+import com.library.dao.model.BasicModel;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +14,7 @@ import lombok.Setter;
 @Document("review")
 @Getter
 @Setter
-public class ReviewModel extends AbstractModel implements Serializable {
+public class ReviewModel extends BasicModel implements Serializable {
 
 	/**
 	 * 

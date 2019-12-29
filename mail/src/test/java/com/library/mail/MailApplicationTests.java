@@ -24,6 +24,6 @@ public class MailApplicationTests {
 	public void contextLoads() {
 		BorrowingCardModel borrow = new BorrowingCardModel();
 		borrow.setBorrowDate(LocalDateTime.now());
-		mailService.sendMail("16110308@student.hcmute.edu.vn", borrow);
+		mailService.sendMailNotifySuccess("16110308@student.hcmute.edu.vn", borrow);
 	}
 }

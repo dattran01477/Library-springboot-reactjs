@@ -76,11 +76,11 @@ public class BookServiceImpl extends AbstractService implements BookService {
 	}
 
 	@Override
-	public boolean updateTotalBookAvailable(List<String> bookIds) {
+	public boolean updateTotalBookAvailable(List<BookModel> bookIds) {
 		int countUpdated = 0;
 		int countStart = bookIds.size();
-		for (String id : bookIds) {
-			BookModel bookModel = bookRepository.findById(id).get();
+		for (BookModel book : bookIds) {
+			BookModel bookModel = bookRepository.findById(book.getId()).get();
 			if (bookModel != null) {
 				bookModel.setAmountBook(bookModel.getAmountBook() - 1);
 				bookRepository.save(bookModel);

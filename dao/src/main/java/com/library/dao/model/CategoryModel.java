@@ -15,7 +15,7 @@ import lombok.Setter;
 @Document("category")
 @Getter
 @Setter
-public class CategoryModel extends AbstractModel implements Serializable {
+public class CategoryModel extends BasicModel implements Serializable {
 
 	/**
 	 * 

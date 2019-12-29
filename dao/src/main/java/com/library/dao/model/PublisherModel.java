@@ -12,7 +12,7 @@ import lombok.Setter;
 @Document("publisher")
 @Getter
 @Setter
-public class PublisherModel extends AbstractModel implements Serializable {
+public class PublisherModel extends BasicModel implements Serializable {
 
 	/**
 	 * 
