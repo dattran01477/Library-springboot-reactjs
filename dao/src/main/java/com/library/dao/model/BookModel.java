@@ -62,6 +62,9 @@ public class BookModel extends BasicModel implements Serializable {
 	@Field("status")
 	private String status;
 
+	@Field("rate")
+	private Double rate = (double) 0;
+
 	@Field("releaseDate")
 	private LocalDateTime releasedDate;
 
@@ -86,6 +89,9 @@ public class BookModel extends BasicModel implements Serializable {
 	@Field("language")
 	@DBRef
 	private LanguageModel language;
+
+	@Field("amount_borrowing")
+	private Long amountBorrowing = 0l;
 
 	public void buildInfo(BookModel bookForm) {
 		this.name = bookForm.getName();

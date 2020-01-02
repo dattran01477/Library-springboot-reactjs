@@ -6,5 +6,5 @@ import com.library.dao.model.BookModel;
 import com.library.dao.repository.custom.BookCustomRepository;
 
 public interface BookRepository extends MongoRepository<BookModel, String>, BookCustomRepository {
-
+	
 }

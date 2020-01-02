@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.library.bussiness.service.impl.BookServiceImpl;
 import com.library.dao.model.BookModel;
+import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.child.ReviewModel;
 import com.library.dao.model.criteria.BookCriteria;
 
@@ -40,6 +41,11 @@ public class BookController extends AbstractController {
 			LOGGER.error(e.getMessage(), e);
 		}
 		return new ResponseEntity<BookModel>(HttpStatus.NOT_FOUND);
+	}
+
+	@GetMapping("top-book")
+	public Page<BookModel> findTopBook() {
+		return bookServiceImpl.findTopBookBorrowing();
 	}
 
 	@GetMapping("/{id}/reviews")

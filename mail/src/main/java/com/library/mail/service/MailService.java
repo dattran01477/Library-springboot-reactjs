@@ -19,7 +19,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.library.dao.model.BorrowingCardModel;
-import com.library.dao.repository.UserRepository;
+
 
 @Service
 public class MailService {

@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.library.bussiness.service.BookService;
 import com.library.bussiness.service.impl.BorrowingCardServiceImpl;
 import com.library.bussiness.service.impl.UserServiceImpl;
 import com.library.dao.enums.BorrowingStatus;
+import com.library.dao.model.BookModel;
 import com.library.dao.model.BorrowingCardModel;
 import com.library.dao.model.UserModel;
 import com.library.dao.model.criteria.BorrowingCardCriteria;
@@ -37,11 +39,15 @@ public class BorrowingController extends AbstractController {
 	@Autowired
 	MailService mailService;
 
+	@Autowired
+	BookService bookService;
+
 	@GetMapping
 	public Page<BorrowingCardModel> findCategoryByCriteria(BorrowingCardCriteria criteria) {
 		return borrwingCardServiceImpl.findBySearchCriteria(criteria);
 	}
 
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<BorrowingCardModel> findById(@PathVariable("id") String id) {
 		try {
@@ -79,6 +85,15 @@ public class BorrowingController extends AbstractController {
 				BorrowingCardModel borrowingCardModel = borrwingCardServiceImpl.create(borrowingCardForm);
 
 				if (borrowingCardModel != null) {
+					try {
+						for (BookModel model : borrowingCardModel.getBookIds()) {
+							BookModel book = bookService.findById(model.getId());
+							book.setAmountBorrowing(book.getAmountBorrowing() + 1);
+							bookService.update(book);
+						}
+					} catch (Exception e) {
+						LOGGER.error(e.getMessage());
+					}
 					userModel.getBorrowings().add(borrowingCardModel);
 					userServiceImpl.update(userModel);
 					mailService.sendMailNotifySuccess(userModel.getEmail(), borrowingCardModel);

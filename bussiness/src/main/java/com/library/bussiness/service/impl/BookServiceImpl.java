@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -114,5 +115,13 @@ public class BookServiceImpl extends AbstractService implements BookService {
 			LOGGER.error(e.getMessage());
 		}
 		return new ReviewModel();
+	}
+
+	@Override
+	public Page<BookModel> findTopBookBorrowing() {
+		BookCriteria criteria = new BookCriteria();
+		criteria.setSortField("amountBorrowing");
+		criteria.setSortDirection(Direction.DESC);
+		return bookRepository.findAllByCriteria(criteria);
 	}
 }
