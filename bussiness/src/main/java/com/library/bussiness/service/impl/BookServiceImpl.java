@@ -31,21 +31,23 @@ public class BookServiceImpl extends AbstractService implements BookService {
 	}
 
 	@Override
-	public void create(BookModel object) {
+	public BookModel create(BookModel object) {
 		try {
-			bookRepository.save(object);
+			return bookRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new BookModel();
 	}
 
 	@Override
-	public void update(BookModel object) {
+	public BookModel update(BookModel object) {
 		try {
-			bookRepository.save(object);
+			return bookRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new BookModel();
 
 	}
 
@@ -67,5 +69,4 @@ public class BookServiceImpl extends AbstractService implements BookService {
 	public Page<BookModel> findBySearchCriteria(BookCriteria criteria) {
 		return bookRepository.findAllByCriteria(criteria);
 	}
-
 }

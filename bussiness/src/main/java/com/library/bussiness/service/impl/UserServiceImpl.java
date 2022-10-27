@@ -26,13 +26,13 @@ public class UserServiceImpl extends AbstractService implements UserService {
 	}
 
 	@Override
-	public void create(UserModel object) {
-		userRepository.save(object);
+	public UserModel create(UserModel object) {
+		return userRepository.save(object);
 	}
 
 	@Override
-	public void update(UserModel object) {
-		userRepository.save(object);
+	public UserModel update(UserModel object) {
+		return userRepository.save(object);
 	}
 
 	@Override
@@ -51,5 +51,4 @@ public class UserServiceImpl extends AbstractService implements UserService {
 		// TODO Auto-generated method stub
 		return userRepository.findAllByCriteria(criteria);
 	}
-
 }

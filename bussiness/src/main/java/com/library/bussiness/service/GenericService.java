@@ -9,9 +9,9 @@ import com.library.dao.model.CategoryModel;
 public interface GenericService<T, ID, C> {
 	public List<T> findAll();
 
-	public void create(T object);
+	public T create(T object);
 
-	public void update(T object);
+	public T update(T object);
 
 	public void delete(ID id);
 

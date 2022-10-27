@@ -30,21 +30,25 @@ public class PublisherImpl extends AbstractService implements PublisherService {
 	}
 
 	@Override
-	public void create(PublisherModel object) {
+	public PublisherModel create(PublisherModel object) {
 		try {
-			publisherRepository.save(object);
+			return publisherRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		
+		return new PublisherModel();
 	}
 
 	@Override
-	public void update(PublisherModel object) {
+	public PublisherModel update(PublisherModel object) {
 		try {
-			publisherRepository.save(object);
+			return publisherRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		
+		return new PublisherModel();
 	}
 
 	@Override

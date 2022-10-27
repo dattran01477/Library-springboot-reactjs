@@ -31,21 +31,24 @@ public class LanguageServiceImpl extends AbstractService implements LanguageServ
 	}
 
 	@Override
-	public void create(LanguageModel object) {
+	public LanguageModel create(LanguageModel object) {
 		try {
-			languageRepository.save(object);
+			return languageRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new LanguageModel();
 	}
 
 	@Override
-	public void update(LanguageModel object) {
+	public LanguageModel update(LanguageModel object) {
 		try {
-			languageRepository.save(object);
+			return languageRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		
+		return new LanguageModel();
 	}
 
 	@Override
@@ -66,5 +69,4 @@ public class LanguageServiceImpl extends AbstractService implements LanguageServ
 	public Page<LanguageModel> findBySearchCriteria(LanguageCriteria criteria) {
 		return languageRepository.findAllByCriteria(criteria);
 	}
-
 }

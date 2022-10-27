@@ -1,7 +1,5 @@
 package com.library.web.api.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -9,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,33 +17,21 @@ import com.library.bussiness.service.PublisherService;
 import com.library.dao.model.PublisherModel;
 import com.library.dao.model.criteria.PublisherCriteria;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
-
 @RestController
 @RequestMapping("/publishers")
-@Api(value = "Publisher API", description = "Publisher API")
 public class PublisherController extends AbstractController {
 	@Autowired
-	PublisherService PublisherService;
+	PublisherService publisherService;
 
-	@ApiOperation(value = "View a list of Publishers", response = List.class)
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successfully retrieved list"),
-			@ApiResponse(code = 401, message = "You are not authorized to view the resource"),
-			@ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
-			@ApiResponse(code = 404, message = "The resource you were trying to reach is not found") })
 	@GetMapping
 	public Page<PublisherModel> findCategoryByCriteria(PublisherCriteria criteria) {
-		return PublisherService.findBySearchCriteria(criteria);
+		return publisherService.findBySearchCriteria(criteria);
 	}
 
-	@ApiOperation(value = "Get a Publisher by id")
 	@GetMapping("/{id}")
 	public ResponseEntity<PublisherModel> findById(@PathVariable("id") String id) {
 		try {
-			PublisherModel book = PublisherService.findById(id);
+			PublisherModel book = publisherService.findById(id);
 			return new ResponseEntity<PublisherModel>(book, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
@@ -55,10 +42,21 @@ public class PublisherController extends AbstractController {
 	@PutMapping("/{id}")
 	public ResponseEntity<PublisherModel> update(@PathVariable("id") String id, @RequestBody PublisherModel bookForm) {
 		try {
-			PublisherModel book = PublisherService.findById(id);
+			PublisherModel book = publisherService.findById(id);
 			book.buildInfo(bookForm);
-			PublisherService.update(book);
+			publisherService.update(book);
 			return new ResponseEntity<PublisherModel>(book, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<PublisherModel>(HttpStatus.NOT_FOUND);
+	}
+	
+	@PostMapping
+	public ResponseEntity<PublisherModel> addNew(@RequestBody PublisherModel publisherFrom) {
+		try {
+			PublisherModel publisherModel = publisherService.create(publisherFrom);
+			return new ResponseEntity<PublisherModel>(publisherModel, HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);
 		}
@@ -69,7 +67,7 @@ public class PublisherController extends AbstractController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity delete(@PathVariable("id") String id) {
 		try {
-			PublisherService.delete(id);
+			publisherService.delete(id);
 			return new ResponseEntity(HttpStatus.OK);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage(), e);

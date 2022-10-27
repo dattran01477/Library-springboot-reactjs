@@ -31,21 +31,23 @@ public class CategoryServiceImpl extends AbstractService implements CategoryServ
 	}
 
 	@Override
-	public void create(CategoryModel object) {
+	public CategoryModel create(CategoryModel object) {
 		try {
-			categoryRepository.save(object);
+			return categoryRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new CategoryModel();
 	}
 
 	@Override
-	public void update(CategoryModel object) {
+	public CategoryModel update(CategoryModel object) {
 		try {
-			categoryRepository.save(object);
+			return categoryRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new CategoryModel();
 	}
 
 	@Override
@@ -55,7 +57,6 @@ public class CategoryServiceImpl extends AbstractService implements CategoryServ
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
-
 	}
 
 	@Override
@@ -67,5 +68,4 @@ public class CategoryServiceImpl extends AbstractService implements CategoryServ
 	public Page<CategoryModel> findBySearchCriteria(CategoryCriteria criteria) {
 		return categoryRepository.findAllByCriteria(criteria);
 	}
-
 }

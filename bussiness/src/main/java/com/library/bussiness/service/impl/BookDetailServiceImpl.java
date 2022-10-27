@@ -30,21 +30,23 @@ public class BookDetailServiceImpl extends AbstractService implements BookDetail
 	}
 
 	@Override
-	public void create(BookDetailModel object) {
+	public BookDetailModel create(BookDetailModel object) {
 		try {
-			bookDetailRepository.save(object);
+			return bookDetailRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new BookDetailModel();
 	}
 
 	@Override
-	public void update(BookDetailModel object) {
+	public BookDetailModel update(BookDetailModel object) {
 		try {
-			bookDetailRepository.save(object);
+			return bookDetailRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new BookDetailModel();
 	}
 
 	@Override

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +41,17 @@ public class CategoryController extends AbstractController {
 		}
 		return new ResponseEntity<CategoryModel>(HttpStatus.NOT_FOUND);
 	}
+	
+	@PostMapping
+	public ResponseEntity<CategoryModel> addNew(@RequestBody CategoryModel categoryFrom) {
+		try {
+			CategoryModel category = categoryServiceImpl.create(categoryFrom);
+			return new ResponseEntity<CategoryModel>(category, HttpStatus.OK);
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+		}
+		return new ResponseEntity<CategoryModel>(HttpStatus.NOT_FOUND);
+	} 
 
 	@PutMapping("/{id}")
 	public ResponseEntity<CategoryModel> update(@PathVariable("id") String id,

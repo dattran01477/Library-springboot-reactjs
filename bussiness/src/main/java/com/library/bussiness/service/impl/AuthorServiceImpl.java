@@ -31,21 +31,23 @@ public class AuthorServiceImpl extends AbstractService implements AuthorService 
 	}
 
 	@Override
-	public void create(AuthorModel object) {
+	public AuthorModel create(AuthorModel object) {
 		try {
-			authorRepository.save(object);
+			return authorRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new AuthorModel();
 	}
 
 	@Override
-	public void update(AuthorModel object) {
+	public AuthorModel update(AuthorModel object) {
 		try {
-			authorRepository.save(object);
+			return authorRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new AuthorModel();
 	}
 
 	@Override
@@ -66,5 +68,4 @@ public class AuthorServiceImpl extends AbstractService implements AuthorService 
 	public Page<AuthorModel> findBySearchCriteria(AuthorCriteria criteria) {
 		return authorRepository.findAllByCriteria(criteria);
 	}
-
 }

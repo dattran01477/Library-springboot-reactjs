@@ -85,5 +85,6 @@ public class CategoryModel extends AbstractModel implements Serializable {
 		this.bookTotal = categoryFrom.getBookTotal();
 		this.type = categoryFrom.getType();
 		this.rank = categoryFrom.getRank();
+		this.parent = categoryFrom.getParent();
 	}
 }

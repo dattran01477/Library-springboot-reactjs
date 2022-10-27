@@ -7,7 +7,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.library.dao.enums.GenderEnum;
 import com.library.dao.enums.RoleEnum;
+import com.library.dao.enums.StatusEnum;
 import com.library.dao.model.child.BorrowingCardModel;
 import com.library.dao.model.child.PenalizeModel;
 
@@ -24,26 +26,37 @@ public class UserModel extends AbstractModel implements Serializable {
 	@Field(value = "user_name")
 	private String username;
 
+	@Field(value = "password")
 	private String password;
 
+	@Field(value = "name")
 	private String name;
 
-	private String status;
+	@Field(value = "status")
+	private StatusEnum status;
 
-	private String gender;
+	@Field(value = "gender")
+	private GenderEnum gender;
 
-	private String role;
+	@Field(value = "role")
+	private RoleEnum role;
 
+	@Field(value = "phone")
 	private String phoneNumber;
 
+	@Field(value = "email")
 	private String email;
 
+	@Field(value = "register_code")
 	private String registerCode;
 
-	private String idEditor;
+	@Field(value = "editor_id")
+	private String editorId;
 
+	@Field(value = "penalize_card")
 	private List<PenalizeModel> penalizeModels;// phiếu phạt
 
+	@Field(value = "borrowing_card")
 	private List<BorrowingCardModel> borrowingCardModels;// phiếu mượn
 
 	public String getId() {
@@ -62,6 +75,30 @@ public class UserModel extends AbstractModel implements Serializable {
 		this.username = username;
 	}
 
+	public StatusEnum getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusEnum status) {
+		this.status = status;
+	}
+
+	public GenderEnum getGender() {
+		return gender;
+	}
+
+	public void setGender(GenderEnum gender) {
+		this.gender = gender;
+	}
+
+	public RoleEnum getRole() {
+		return role;
+	}
+
+	public void setRole(RoleEnum role) {
+		this.role = role;
+	}
+
 	public String getPassword() {
 		return password;
 	}
@@ -76,30 +113,6 @@ public class UserModel extends AbstractModel implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
 	}
 
 	public String getPhoneNumber() {
@@ -126,14 +139,6 @@ public class UserModel extends AbstractModel implements Serializable {
 		this.registerCode = registerCode;
 	}
 
-	public String getIdEditor() {
-		return idEditor;
-	}
-
-	public void setIdEditor(String idEditor) {
-		this.idEditor = idEditor;
-	}
-
 	public List<PenalizeModel> getPenalizeModels() {
 		return penalizeModels;
 	}
@@ -150,16 +155,26 @@ public class UserModel extends AbstractModel implements Serializable {
 		this.borrowingCardModels = borrowingCardModels;
 	}
 
+	public String getEditorId() {
+		return editorId;
+	}
+
+	public void setEditorId(String editorId) {
+		this.editorId = editorId;
+	}
+
 	public void buildInfo(UserModel userForm) {
 		this.username = userForm.getUsername();
 		this.password = userForm.getPassword();
 		this.name = userForm.getName();
-		this.status = userForm.getStatus();
-		this.gender = userForm.getGender();
-		this.role = userForm.getRole();
 		this.phoneNumber = userForm.getPhoneNumber();
 		this.email = userForm.getEmail();
 		this.registerCode = userForm.getRegisterCode();
-		this.idEditor = userForm.getIdEditor();
+		this.editorId = userForm.getEditorId();
+		this.borrowingCardModels = userForm.getBorrowingCardModels();
+		this.gender = userForm.getGender();
+		this.penalizeModels = userForm.getPenalizeModels();
+		this.role = userForm.getRole();
+		this.status = userForm.getStatus();
 	}
 }

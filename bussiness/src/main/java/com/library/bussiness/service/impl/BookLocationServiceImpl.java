@@ -31,21 +31,23 @@ public class BookLocationServiceImpl extends AbstractService implements BookLoca
 	}
 
 	@Override
-	public void create(BookLocationModel object) {
+	public BookLocationModel create(BookLocationModel object) {
 		try {
-			bookLocationRepository.save(object);
+			return bookLocationRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new BookLocationModel();
 	}
 
 	@Override
-	public void update(BookLocationModel object) {
+	public BookLocationModel update(BookLocationModel object) {
 		try {
-			bookLocationRepository.save(object);
+			return bookLocationRepository.save(object);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
+		return new BookLocationModel();
 	}
 
 	@Override
@@ -66,5 +68,4 @@ public class BookLocationServiceImpl extends AbstractService implements BookLoca
 	public Page<BookLocationModel> findBySearchCriteria(BookLocationCriteria criteria) {
 		return bookLocationRepository.findAllByCriteria(criteria);
 	}
-
 }
